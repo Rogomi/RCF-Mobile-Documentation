@@ -25,23 +25,6 @@
 | - | 
 
 
-#### TABLE OF CONTENTS
-[GETTING STARTED](####%20GETTING%20STARTED)  
-[INSTALLATION AND DEVELOPMENT](####%20INSTALLATION%20AND%20DEVELOPMENT)  
-[PROGRAMMING LANGUAGE](####%20PROGRAMMING%20LANGUAGE)  
-[MINIMUM VERSION](####%20MINIMUM%20VERSION)  
-[APPLICATION ID](####%20APPLICATION%20ID)  
-[DEBUGGING](####%20DEBUGGING)  
-[WEB API](####%20WEB%20API)  
-[THIRD PARTY LIBRARIES](####%20THIRD%20PARTY%20LIBRARIES)  
-[Important Libraries](####%20Important%20Libraries)  
-[#### SSO Libraries](####%20SSO%20Libraries)  
-[UI Libraries](####%20UI%20Libraries)  
-[ACTIVITIES AND CONTROLLERS](####%20ACTIVITIES%20AND%20CONTROLLERS)  
-[APPLICATION FLOW DIAGRAM](####%20APPLICATION%20FLOW%20DIAGRAM)
-
-
-
 #### GETTING STARTED
 
 Right Choice Finance iOS requires Xcode 11.0 and above for development. This project uses Swift 5 as the Programming Language, Storyboard for the Interface and CocoaPods for Third Party Libraries. The current Xcode version used for development is 11.5. The minimum iOS Version required is iOS 12.0
