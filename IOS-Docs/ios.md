@@ -11,7 +11,7 @@
     </tr>
     <tr>
         <td>Reviewed By:</td>
-        <td>empty</td>
+        <td>-</td>
     </tr>
 </table>
 
@@ -90,7 +90,7 @@ ph.rightchoicefinance.app
 
 We use a few debugging tools to test RCF’s functionalities.
 For the Native App, we use Xcode's debugging console to create breakpoints and test variables, API responses, and identify null objects which sometimes causes the crash.
-To test the API before integrating for app usage, we use Postman (https://www.getpostman.com/). Postman is a very reliable REST API tool. We can test different HTTP Methods especially POST, PATCH, PUT, DELETE and GET. We can also add header variables to test SSO and token authentications.
+To test the API before integrating for app usage, we use Postman (<a>https://www.getpostman.com/</a>). Postman is a very reliable REST API tool. We can test different HTTP Methods especially POST, PATCH, PUT, DELETE and GET. We can also add header variables to test SSO and token authentications.
 We also use iOS Simulator in order to test the apps in different screen sizes and iOS Versions.
 
 
@@ -104,84 +104,84 @@ Most of the third party libraries are installed using CocoaPods. They can be add
 
 #### Important Libraries
 
-Alamofire - used to handle app communication with the Web API.
-SwiftyJSON - used to handle JSON objects and have the fields be easily checked for nulls before converting to swift objects.
-SwiftDate - used to handle Dates to have an ease of adding days and comparing dates.
-ObjectMapper - used alongside SwiftyJSON in order to convert JSON objects to swift objects.
-Reachability - used to check internet connection before loading the API and prevent users from further actions.
-Firebase/Analytics - a mobile SDK library for Google Analytics platform used to analyze usage data from users.
-Firebase/Crashlytics - used to report crashes from Users that are not encountered during development and debugging.
-SwiftSignatureView - used to implement signing on loan applications
-Charts - used to implement displaying of credit status on loan dashboard
-BiometricAuthentication - used to allow user to log in using Touch ID or Face ID
-SAMKeychain - used to store user’s device ID to identify when logging in using biometrics
-QRCodeReader.swift - used to scan QR codes from other user when sending funds
+Alamofire - used to handle app communication with the Web API.  
+SwiftyJSON - used to handle JSON objects and have the fields be easily checked for nulls before converting to swift objects.  
+SwiftDate - used to handle Dates to have an ease of adding days and comparing dates.  
+ObjectMapper - used alongside SwiftyJSON in order to convert JSON objects to swift objects.  
+Reachability - used to check internet connection before loading the API and prevent users from further actions.  
+Firebase/Analytics - a mobile SDK library for Google Analytics platform used to analyze usage data from users.  
+Firebase/Crashlytics - used to report crashes from Users that are not encountered during development and debugging.  
+SwiftSignatureView - used to implement signing on loan applications  
+Charts - used to implement displaying of credit status on loan dashboard  
+BiometricAuthentication - used to allow user to log in using Touch ID or Face ID  
+SAMKeychain - used to store user’s device ID to identify when logging in using biometrics  
+QRCodeReader.swift - used to scan QR codes from other user when sending funds  
 
 
 #### SSO Libraries
 
-FBSDKLoginKit - used for authentication using Facebook accounts.
+FBSDKLoginKit - used for authentication using Facebook accounts.  
 GoogleSignIn - used for authentication using Google accounts.
 
 
 #### UI Libraries
 
-IBAnimatable - used to customize UI Views to match the designs more accurately.
-MBProgressHUD - used to indicate that the items are loading and prevent user interaction until the items are loaded.
-IQKeyboardManager - used to implement Keyboard avoiding when entering data into text-fields that are covered by the iOS On-screen Keyboard.
-SDWebImage - used to set images on UIImageViews using URLs.
+IBAnimatable - used to customize UI Views to match the designs more accurately.  
+MBProgressHUD - used to indicate that the items are loading and prevent user interaction until the items are loaded.  
+IQKeyboardManager - used to implement Keyboard avoiding when entering data into text-fields that are covered by the iOS On-screen Keyboard.  
+SDWebImage - used to set images on UIImageViews using URLs.  
 
 
 #### ACTIVITIES AND CONTROLLERS
 **Core Classes**    
-AppDelegate - contains handlers for application states for devices with iOS 12 and below. It also handles deep linking to direct users to specific screens depending on the URL specified.
-RCFViewDelegate - most of the view controllers in the app conforms to this protocol and it contains global functions that are accessible throughout the development and avoid redundant functionalities.
-PickerDelegate - view controllers that conforms to this protocol are able open pickers with specified list of items for selection or date.
-HUDDelegate - view controllers that conforms to this protocol are able to show HUDs to indicate that a request is being made to the Web API.
-RCFInterface - contains functions that manage the app sessions and checks for specific variables saved on UserDefaults.
-RCFWeb - contains functions that enable the app to communicate with the web API.
-RCFWeb.Endpoint - a customized enum type that enlists the routes interfaced from the web API and makes use of Alamofire to connect. It dynamically loads the endpoints with set parameters, methods and headers.
-Models Swift Files - contains the model classes with their functions that returns different values and statements to be used as output for views.
+- AppDelegate - contains handlers for application states for devices with iOS 12 and below. It also handles deep linking to direct users to specific screens depending on the URL specified.  
+- RCFViewDelegate - most of the view controllers in the app conforms to this protocol and it contains global functions that are accessible throughout the development and avoid redundant functionalities.  
+- PickerDelegate - view controllers that conforms to this protocol are able open pickers with specified list of items for selection or date.  
+- HUDDelegate - view controllers that conforms to this protocol are able to show HUDs to indicate that a request is being made to the Web API.  
+- RCFInterface - contains functions that manage the app sessions and checks for specific variables saved on UserDefaults.  
+- RCFWeb - contains functions that enable the app to communicate with the web API.  
+- RCFWeb.Endpoint - a customized enum type that enlists the routes interfaced from the web API and makes use of Alamofire to connect. It dynamically loads the endpoints with set parameters, methods and headers.  
+- Models Swift Files - contains the model classes with their functions that returns different values and statements to be used as output for views.
  
 **View Controllers**
-RCFViewController - child view controllers will inherit this class to avoid code rewrites when the views are loading or about to appear. Itl also contains global functions to be reused throughout the development.
-AppTabBarController - contains functions to handle the startup operations.
-SignInViewController - contains functions that handles user’s authentication. It has different ways to login besides using email & password, such as Logging in with Facebook, Google or Apple ID. It also handles logins using TouchID/FaceID.
-SignUpViewController - contains functions that handles user’s registration. It contains the form fields where the user can fill their information up.
-TNCContainerViewController - a view controller where the user can read the Terms of Usage/Privacy Policy upon signing up.
-VerifyEmailViewController - contains a message that is indicated after the user signs up. The user can also resend the verification email using this page.
-ForgotPasswordViewController - a view controller where the user can choose to reset their password. After inserting the email address, the app will connect with the Web API to send the reset password email to the user.
-CheckInboxViewController - contains a message that is indicated after the users use the Forgot Password feature.
-WalletViewController - contains functions where the user can unlock their wallet, check their balance, recent transactions, open specific features of the app like sending funds, withdrawing funds, paying bills and other options.
-AddFundsViewController - a view controller that contains a form where the user can specify the amount and type of service to be used when adding funds.
-AddFundsWebViewController - a view controller that contains the web view where Dragon pay is opened and the user specifies their banks where to get the funds from.
-SendFundsViewController - a view controller where the user can send specific amount to other users
-PayBillsViewController - a view controller where the user can choose to pay bills on specific billers.
-WithdrawViewController - a view controller where the user can choose specific banks to transfer their money from their wallet account.
-RequestFundsViewController - a view controller where the user can request funds from other users.
-MyCodeViewController - a view controller where the user can see their QR Code image and be able to save or share it with other people.
-TransactionsViewController - a view controller where the user can see the list of transactions they have made. It can also filter the list by date or specific categories.
-TransactionDetailsViewController - a view controller where the user can see the details of the transaction they selected from the transactions list. It is also reused on specific transactions in the Wallet dashboard.
-TransactionReviewViewController - a view controller where the user can see a preview of their transaction before they are carried out.
-ContactListViewController - a view where the user can choose specific contacts to send or request funds from.
-AddContactViewController - a view where the user can input another user’s information so they can add them as contact.
-ScanQRContactViewController - a view that contains a QR Scanner and is used when adding other users using their respective QR Codes as displayed from MyCodeViewController.
-CWStep1ViewController - a view where the user can start their wallet activation. It contains fields that mostly hold the user’s personal information for wallet activation.
-CWStep2ViewController - a view where the user can input their contact numbers for wallet activation.
-CWStep3ViewController - a view where the user can input their address information for wallet activation.
-CWStep4ViewController - a view where the user can input their employment information for wallet activation.
-CWStep5ViewController - a view where the user can upload their documents for wallet activation.
-LoanViewController - contains functions where the user can see their list of active loans, know their upcoming due dates, know their credit limits and apply for loans.
-LoanInactiveViewController - a view which is only displayed if the user has not activated their loan account yet. It contains functions where user can choose to activate their application.
-CLAStep1ViewController - a view where the user can upload their documents for loan account activation.
-CLAStep2a1SignatureAgreementViewController - a view where the user is prompted for the terms and conditions when activating their loan accounts.
-CLAStep2a2SignatureSignViewController - a view where the user can sign for loan activation.
-CLAStep2a3SignatureReviewViewController - a view where the user can finalize their signature for loan activation. Upon submission, the user is prompted to wait for approval.
-ProfileViewController - contains functions where the user can update their information.
-ManageProfileViewController - contains functions where the user can edit their profile information and image.
-ChangePasswordViewController - contains functions where the user can update their password.
-ChangePINViewController - contains functions where the user can update their PIN.
-TermsPrivacyViewController - contains a page of terms and conditions/privacy policy for the users to read.
-DigitalSignOnSettingsViewController - contains functions where the user can choose to enable signing in using their TouchID/FaceID.
+- RCFViewController - child view controllers will inherit this class to avoid code rewrites when the views are loading or about to appear. Itl also contains global functions to be reused throughout the development.  
+- AppTabBarController - contains functions to handle the startup operations.  
+SignInViewController - contains functions that handles user’s authentication. It has different ways to login besides using email & password, such as Logging in with Facebook, Google or Apple ID. It also handles logins using TouchID/FaceID.  
+- SignUpViewController - contains functions that handles user’s registration. It contains the form fields where the user can fill their information up.  
+- TNCContainerViewController - a view controller where the user can read the Terms of Usage/Privacy Policy upon signing up.  
+- VerifyEmailViewController - contains a message that is indicated after the user signs up. The user can also resend the verification email using this page.  
+- ForgotPasswordViewController - a view controller where the user can choose to reset their password. After inserting the email address, the app will connect with the Web API to send the reset password email to the user.  
+- CheckInboxViewController - contains a message that is indicated after the users use the Forgot Password feature.  
+- WalletViewController - contains functions where the user can unlock their wallet, check their balance, recent transactions, open specific features of the app like sending funds, withdrawing funds, paying bills and other options.  
+    - AddFundsViewController - a view controller that contains a form where the user can specify the amount and type of service to be used when adding funds.  
+    - AddFundsWebViewController - a view controller that contains the web view where Dragon pay is opened and the user specifies their banks where to get the funds from.  
+    - SendFundsViewController - a view controller where the user can send specific amount to other users  
+    - PayBillsViewController - a view controller where the user can choose to pay bills on specific billers.  
+    - WithdrawViewController - a view controller where the user can choose specific banks to transfer their money from their wallet account.  
+    - RequestFundsViewController - a view controller where the user can request funds from other users.  
+    - MyCodeViewController - a view controller where the user can see their QR Code image and be able to save or share it with other people.  
+    - TransactionsViewController - a view controller where the user can see the list of transactions they have made. It can also filter the list by date or specific categories.  
+    - TransactionDetailsViewController - a view controller where the user can see the details of the transaction they selected from the transactions list. It is also reused on specific transactions in the Wallet dashboard.  
+    - TransactionReviewViewController - a view controller where the user can see a preview of their transaction before they are carried out.  
+    - ContactListViewController - a view where the user can choose specific contacts to send or request funds from.  
+    - AddContactViewController - a view where the user can input another user’s information so they can add them as contact.  
+    - ScanQRContactViewController - a view that contains a QR Scanner and is used when adding other users using their respective QR Codes as displayed from MyCodeViewController.  
+    - CWStep1ViewController - a view where the user can start their wallet activation. It contains fields that mostly hold the user’s personal information for wallet activation.  
+    - CWStep2ViewController - a view where the user can input their contact numbers for wallet activation.  
+    - CWStep3ViewController - a view where the user can input their address information for wallet activation.  
+    - CWStep4ViewController - a view where the user can input their employment information for wallet activation.  
+    - CWStep5ViewController - a view where the user can upload their documents for wallet activation.  
+    - LoanViewController - contains functions where the user can see their list of active loans, know their upcoming due dates, know their credit limits and apply for loans.  
+    - LoanInactiveViewController - a view which is only displayed if the user has not activated their loan account yet. It contains functions where user can choose to activate their application.  
+    - CLAStep1ViewController - a view where the user can upload their documents for loan account activation.  
+    - CLAStep2a1SignatureAgreementViewController - a view where the user is prompted for the terms and conditions when activating their loan accounts.  
+    - CLAStep2a2SignatureSignViewController - a view where the user can sign for loan activation.  
+    - CLAStep2a3SignatureReviewViewController - a view where the user can finalize their signature for loan activation. Upon submission, the user is prompted to wait for approval.  
+    - ProfileViewController - contains functions where the user can update their information.  
+    - ManageProfileViewController - contains functions where the user can edit their profile information and image.  
+    - ChangePasswordViewController - contains functions where the user can update their password.  
+    - ChangePINViewController - contains functions where the user can update their PIN.  
+    - TermsPrivacyViewController - contains a page of terms and conditions/privacy policy for the users to read.  
+    - DigitalSignOnSettingsViewController - contains functions where the user can choose to enable signing in using their TouchID/FaceID.  
 
 #### APPLICATION FLOW DIAGRAM
