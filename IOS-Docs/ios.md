@@ -2,69 +2,43 @@
 ## Right Choice Finance
 ### Technical Documentation
 
-<style>
-    table {
-        width: 100%;
-    }
-</style>
 
-<table style="width: 100%">
-    <tr>
-        <th colspan="2">Publisher Information</th>
-    </tr>
-    <tr>
-        <td>Created By:</td>
-        <td>John Patrick Teruel</td>
-    </tr>
-    <tr>
-        <td>Reviewed By:</td>
-        <td>-</td>
-    </tr>
-</table>
 
-<table style="width: 100%">
-    <tr>
-        <th colspan="2">Project Details</th>
-    </tr>
-    <tr>
-        <td>Project Name</td>
-        <td>Right Choice Finance</td>
-    </tr>
-    <tr>
-        <td>Platform</td>
-        <td>iOS</td>
-    </tr>
-    <tr>
-        <td>Start Date</td>
-        <td>August 5, 2020</td>
-    </tr>
-    <tr>
-        <td>Finish Date</td>
-        <td>empty</td>
-    </tr>
-</table>
+| Publisher Information|  |
+| ----------- | ------------------- |
+| Created By: | John Patrick Teruel |   
+| Reviewed By: | - |
 
-<table style="width: 100%">
-    <tr>
-        <th>Project Objectives</th>
-    </tr>
-    <tr>
-        <td>-</td>
-    </tr>
-</table>
 
-<table style="width: 100%">
-    <tr>
-        <th colspan="2">Table of Contents</th>
-    </tr>
-    <tr>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>-</td>
-    </tr>
-</table>
 
+| Project Details |  |
+| ------------ | -------------------- |
+| Project Name | Right Choice Finance |
+| Platform | iOS |
+| Start Date | August 5, 2020 |
+| Finish Date | - |
+  
+  
+
+| Project Objectives | 
+| ------------------ |
+| - | 
+
+
+#### TABLE OF CONTENTS
+[GETTING STARTED](####%20GETTING%20STARTED)  
+[INSTALLATION AND DEVELOPMENT](####%20INSTALLATION%20AND%20DEVELOPMENT)  
+[PROGRAMMING LANGUAGE](####%20PROGRAMMING%20LANGUAGE)  
+[MINIMUM VERSION](####%20MINIMUM%20VERSION)  
+[APPLICATION ID](####%20APPLICATION%20ID)  
+[DEBUGGING](####%20DEBUGGING)  
+[WEB API](####%20WEB%20API)  
+[THIRD PARTY LIBRARIES](####%20THIRD%20PARTY%20LIBRARIES)  
+[Important Libraries](####%20Important%20Libraries)  
+[#### SSO Libraries](####%20SSO%20Libraries)  
+[UI Libraries](####%20UI%20Libraries)  
+[ACTIVITIES AND CONTROLLERS](####%20ACTIVITIES%20AND%20CONTROLLERS)  
+[APPLICATION FLOW DIAGRAM](####%20APPLICATION%20FLOW%20DIAGRAM)
 
 
 
