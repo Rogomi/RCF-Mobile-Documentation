@@ -2,7 +2,7 @@
 ## Right Choice Finance
 ### Technical Documentation
 
-<table>
+<table style="width: 100%">
     <tr>
         <th colspan="2">Publisher Information</th>
     </tr>
@@ -16,7 +16,7 @@
     </tr>
 </table>
 
-<table>
+<table style="width: 100%">
     <tr>
         <th colspan="2">Project Details</th>
     </tr>
@@ -38,7 +38,7 @@
     </tr>
 </table>
 
-<table>
+<table style="width: 100%">
     <tr>
         <th>Project Objectives</th>
     </tr>
@@ -47,7 +47,7 @@
     </tr>
 </table>
 
-<table>
+<table style="width: 100%">
     <tr>
         <th colspan="2">Table of Contents</th>
     </tr>
