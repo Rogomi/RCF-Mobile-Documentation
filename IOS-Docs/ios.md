@@ -91,17 +91,17 @@ ph.rightchoicefinance.app
 
 We use a few debugging tools to test RCF’s functionalities.
 For the Native App, we use Xcode's debugging console to create breakpoints and test variables, API responses, and identify null objects which sometimes causes the crash.
-To test the API before integrating for app usage, we use Postman (<a>https://www.getpostman.com/</a>). Postman is a very reliable REST API tool. We can test different HTTP Methods especially POST, PATCH, PUT, DELETE and GET. We can also add header variables to test SSO and token authentications.
+To test the API before integrating for app usage, we use [Postman](https://www.getpostman.com/). Postman is a very reliable REST API tool. We can test different HTTP Methods especially POST, PATCH, PUT, DELETE and GET. We can also add header variables to test SSO and token authentications.
 We also use iOS Simulator in order to test the apps in different screen sizes and iOS Versions.
 
 
 #### WEB API
 
-Test URL: http://testapi.rcf.ph/api/v1/clients
-Production URL: https://api.rightchoicefinance.ph/api/v1/clients
+[Test URL](http://testapi.rcf.ph/api/v1/clients)  
+[Production URL](https://api.rightchoicefinance.ph/api/v1/clients)
 
 #### THIRD PARTY LIBRARIES
-Most of the third party libraries are installed using CocoaPods. They can be added by searching library names found in https://cocoapods.org/, inserting them in the Podfile and running the pod install command in the Terminal.
+Most of the third party libraries are installed using CocoaPods. They can be added by searching library names found in [https://cocoapods.org/](https://cocoapods.org/), inserting them in the Podfile and running the pod install command in the Terminal.
 
 #### Important Libraries
 
