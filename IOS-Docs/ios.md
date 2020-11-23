@@ -1,4 +1,5 @@
-# RCF IOS Docs
+## Right Choice Finance
+### Technical Documentation
 
 <table>
     <tr>
@@ -57,8 +58,7 @@
     </tr>
 </table>
 
-## Right Choice Finance
-### Technical Documentation
+
 
 
 #### GETTING STARTED
