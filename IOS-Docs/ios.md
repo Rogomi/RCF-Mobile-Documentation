@@ -1,5 +1,5 @@
 [Back](../index.md)
-## Right Choice Finance
+## Right Choice Finance iOS
 ### Technical Documentation
 
 
