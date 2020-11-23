@@ -2,6 +2,12 @@
 ## Right Choice Finance
 ### Technical Documentation
 
+<style>
+    table {
+        width: 100%;
+    }
+</style>
+
 <table style="width: 100%">
     <tr>
         <th colspan="2">Publisher Information</th>
