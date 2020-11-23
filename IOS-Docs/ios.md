@@ -3,28 +3,6 @@
 ### Technical Documentation
 
 
-
-| Publisher Information|  |
-| ----------- | ------------------- |
-| Created By: | John Patrick Teruel |   
-| Reviewed By: | - |
-
-
-
-| Project Details |  |
-| ------------ | -------------------- |
-| Project Name | Right Choice Finance |
-| Platform | iOS |
-| Start Date | August 5, 2020 |
-| Finish Date | - |
-  
-  
-
-| Project Objectives | 
-| ------------------ |
-| - | 
-
-
 #### GETTING STARTED
 
 Right Choice Finance iOS requires Xcode 11.0 and above for development. This project uses Swift 5 as the Programming Language, Storyboard for the Interface and CocoaPods for Third Party Libraries. The current Xcode version used for development is 11.5. The minimum iOS Version required is iOS 12.0
