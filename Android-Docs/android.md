@@ -1,4 +1,5 @@
 [Back](../index.md)
+
 # Right Choice Finance
 
 ## Technical Documentation
@@ -47,19 +48,72 @@ Most of the third-party libraries are integrated using Gradle. They can be added
 
 #### Main Utilities
 
-- RetrofitBuilder - a class which contains the network settings (i.e timeout span).
-- AppPreferences - handles the storing of simple data such as user name, if user login, etc.
-- ApiService - a class which contains the endpoints call. what kind of httprequest, the parameters to be passed, response type.
-- ApiEndpoint - a class which contains the constant endpoint strings
+- **RetrofitBuilder** - a class which contains the network settings (i.e timeout span).
+
+  ##### Methods
+
+  - `buildAuth(appPreferences: AppPreferences): Retrofit`
+  - `build(): Retrofit`
+  - `build(appPreferences: AppPreferences): Retrofit`
+
+- **AppPreferences** - handles the storing of simple data such as user name, if user login, etc.
+  ##### Methods
+  -
+- **ApiService** - a class which contains the endpoints call. what kind of httprequest, the parameters to be passed, response type.
+- **ApiEndpoint** - a class which contains the constant endpoint strings
 
 #### Activities/Fragments
 
-- SplashActivity - handles the Splash page
-- LoginActivity - handles the Login Page
-- RegistrationActivity - handles the registration
-- ForgotPasswordActivity - handles the forgot password
-- MainActivity - container of all fragments after login
-- ProfileFragment - handles the profile page
-- WalletFragment - handles the wallet page
-- LoanDashboardFragment - handles the dashboard
-- FundsFragment - handles the wallet transactions
+- **SplashActivity** - handles the Splash page
+- **LoginActivity** - handles the Login Page
+  ##### Methods
+  - `printKeyHash()`
+  - `signIn()`
+  - `initFacebookLogin()`
+  - `initGoogleLogin()`
+  - `signInGoogle()`
+  - `handleSignInResult(completedTask: Task<GoogleSignInAccount>)`
+- **RegistrationActivity** - handles the registration
+  ##### Methods
+  - `initPresenter()`
+  - `saveInformation()`
+  - `onRegistered()`
+  - `onProvinces(provinces: List<Province>)`
+  - `onCities(cities: List<City>)`
+- **ForgotPasswordActivity** - handles the forgot password
+  ##### Methods
+  - `initLayout()`
+  - `resetPassword()`
+  - `onResetPassword()`
+- **MainActivity** - container of all fragments after login
+  ##### Methods
+  - `initNavigation()`
+  - `replaceFragment(fragment: BaseFragment)`
+  - `addFragment(fragment: BaseFragment)`
+  - `addFragmentNoBackStack(fragment: BaseFragment)`
+- **ProfileFragment** - handles the profile page
+  ##### Methods
+  - `initProfile()`
+  - `initActions()`
+  - `shareApp()`
+- **WalletFragment** - handles the wallet page
+  ##### Methods
+  - `initContainers()`
+  - `initFields()`
+  - `loginWallet()`
+  - `onWalletLoggedIn(walletLoginData: WalletLoginData)`
+  - `onGetWalletBalance(walletBalanceData: WalletBalanceData)`
+  - `onLock()`
+  - `showTransactions()`
+  - `onRenderTransactions(transactions: List<Transaction>)`
+- **LoanDashboardFragment** - handles the dashboard
+  ##### Methods
+  - `initContainers()`
+  - `showTransactions()`
+  - `onRenderLoans(data: List<LoanResponse>?)`
+  - `onRenderLoanCredit(loanCredit: LoanCredit)`
+  - `getActiveLoans(): List<LoanResponse>`
+  - `getOtherLoans(): List<LoanResponse>`
+  - `getDueLoans(): List<LoanResponse>`
+  - `createDataSeries(currentValue: Float, maxValue: Float)`
+- **FundsFragment** - handles the wallet transactions
