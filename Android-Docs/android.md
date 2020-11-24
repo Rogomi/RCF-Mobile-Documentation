@@ -130,13 +130,11 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `initCashAdvance()`
   - `onRenderCashAdvances(cashAdvances: List<CashAdvance>)`
   - `onSelectedCashAdvance(cashAdvance: CashAdvance)`
-- **CashAdvanceHrisPresenter** -
   ##### Methods
   - `getCashAdvance()`
 - **CashAdvanceDetailsHrisFragment** -
   ##### Methods
   - `initCashAdvances()`
-- **CashAdvanceDetailsPresenter** -
   ##### Methods
   - `approveCashAdvance(id: Int)`
   - `declineCashAdvance(id: Int)`
@@ -149,7 +147,6 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `initEmployee()`
   - `onSearch(keyword: String)`
   - `onRenderEmployees(employees: List<Employee>)`
-- **EmployeeHrisPresenter** -
   ##### Methods
   - `getEmployee()`
 - **LeaveHrisAllFragment** -
@@ -187,7 +184,6 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `initPayslips()`
   - `onRenderPayslips(payslips: List<Payslip>)`
   - `onSelectedPayslip(payslips: Payslip)`
-- **PayslipsPresenter** -
   ##### Methods
   - `getPayslips()`
   - `getPayslipsByEmployee(employeeCode : String)`
@@ -195,11 +191,16 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   ##### Methods
   - `initTimelogs()`
 - **TimesheetHrisAllFragment** -
+
   ##### Methods
+
   - `onSearch(keyword: String)`
   - `onRenderTimesheets(timesheets: List<TimeLog>)`
   - `onSelectedTimesheet(timesheet: TimeLog)`
-- **TimesheetHrisPresenter** -
+
+- **BankListFragment** -
   ##### Methods
-  - `getTimesheets()`
-  - `getTimesheetsByEmployee(employeeCode : String)`
+  - `initBanks()`
+  - `onSearch(keyword: String)`
+  - `onRenderBanks(banks: List<Bank>)`
+  - `onSelectedBank(bank: Bank)`
