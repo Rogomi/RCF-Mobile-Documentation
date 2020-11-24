@@ -117,3 +117,89 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `getDueLoans(): List<LoanResponse>`
   - `createDataSeries(currentValue: Float, maxValue: Float)`
 - **FundsFragment** - handles the wallet transactions
+- **CashAdvanceHrisAdapter** -
+- **CashAdvanceHrisAllFragment** -
+  ##### Methods
+  - `onSearch(keyword: String)`
+  - `initCashAdvance()`
+  - `onRenderCashAdvances(cashAdvanceList: List<CashAdvance>)`
+  - `onSelectedCashAdvance(cashAdvance: CashAdvance)`
+- **CashAdvanceHrisDashboardFragment** -
+  ##### Methods
+  - `initEmployeeFragment()`
+  - `initCashAdvance()`
+  - `onRenderCashAdvances(cashAdvances: List<CashAdvance>)`
+  - `onSelectedCashAdvance(cashAdvance: CashAdvance)`
+- **CashAdvanceHrisPresenter** -
+  ##### Methods
+  - `getCashAdvance()`
+- **CashAdvanceDetailsHrisFragment** -
+  ##### Methods
+  - `initCashAdvances()`
+- **CashAdvanceDetailsPresenter** -
+  ##### Methods
+  - `approveCashAdvance(id: Int)`
+  - `declineCashAdvance(id: Int)`
+- **EmployeeHrisDashboardFragment** -
+  ##### Methods
+  - `onRenderEmployees(employees: List<Employee>)`
+  - `getTotalEmployeeSize(): Int`
+- **EmployeeHrisFragment** -
+  ##### Methods
+  - `initEmployee()`
+  - `onSearch(keyword: String)`
+  - `onRenderEmployees(employees: List<Employee>)`
+- **EmployeeHrisPresenter** -
+  ##### Methods
+  - `getEmployee()`
+- **LeaveHrisAllFragment** -
+  ##### Methods
+  - `onSearch(fromDate: Date?, toDate: Date?)`
+  - `onSelectedLeave(leave: Leave)`
+- **LeaveHrisDashboardFragment** -
+  ##### Methods
+  - `initLeave()`
+  - `onRenderLeaves(leaves: List<Leave>)`
+  - `onSelectedLeave(leave: Leave)`
+- **LeaveDetailsHrisFragment** -
+  ##### Methods
+  - `initLeaves()`
+- **OvertimeHrisAllFragment** -
+  ##### Methods
+  - `onSearch(fromDate: Date?, toDate: Date?)`
+  - `onSelectedOvertime(overtime: Overtime)`
+- **OvertimeHrisDashboardFragment** -
+  ##### Methods
+  - `onRenderOvertimes(overtimes: List<Overtime>)`
+  - `onSelectedOvertime(overtime: Overtime)s`
+- **OvertimeDetailsHrisFragment** -
+  ##### Methods
+  - `initOvertimes()`
+- **PayslipDetailsHrisFragment** -
+  ##### Methods
+  - `initPayslips()`
+- **PayslipDetailsHrisFragment** -
+  ##### Methods
+  - `initPayslips()`
+- **PayslipsHrisAllFragment** -
+  ##### Methods
+  - `onSearch(keyword: String)`
+  - `initPayslips()`
+  - `onRenderPayslips(payslips: List<Payslip>)`
+  - `onSelectedPayslip(payslips: Payslip)`
+- **PayslipsPresenter** -
+  ##### Methods
+  - `getPayslips()`
+  - `getPayslipsByEmployee(employeeCode : String)`
+- **TimesheetDetailsHrisFragment** -
+  ##### Methods
+  - `initTimelogs()`
+- **TimesheetHrisAllFragment** -
+  ##### Methods
+  - `onSearch(keyword: String)`
+  - `onRenderTimesheets(timesheets: List<TimeLog>)`
+  - `onSelectedTimesheet(timesheet: TimeLog)`
+- **TimesheetHrisPresenter** -
+  ##### Methods
+  - `getTimesheets()`
+  - `getTimesheetsByEmployee(employeeCode : String)`
