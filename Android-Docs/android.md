@@ -204,3 +204,63 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `onSearch(keyword: String)`
   - `onRenderBanks(banks: List<Bank>)`
   - `onSelectedBank(bank: Bank)`
+- **BillerListFragment** -
+  ##### Methods
+  - `initBillers()`
+  - `onSearch(keyword: String)`
+  - `onRenderBillers(billers: List<Biller>)`
+  - `onSelectedBiller(biller: Biller)`
+- **CashAdvanceFragment** -
+  ##### Methods
+  - `onApplyCashAdvance()`
+- **AddContactFragment** -
+  ##### Methods
+  - `checkValidEmail()`
+  - `onAddContact()`
+- **RecipientsListFragment** -
+  ##### Methods
+  - `initRecipients()`
+  - `onRenderWalletContacts(walletContacts: List<WalletContact>)`
+  - `onSelectedRecipient(walletContact: WalletContact)`
+- **FundsFragment** -
+- **SendFundFragment** -
+  ##### Methods
+  - `addField()`
+- **SendIndividualFundFragment** -
+  ##### Methods
+  - `getValueRequest(): SendFundRequest`
+- **AddFundsFragment** -
+  ##### Methods
+  - `openUrl(url: String)`
+- **InvestmentsFragment** -
+
+  ##### Methods
+
+  - `checkWallet()`
+  - `initInvestments()`
+  - `onGetInvestments(investments: List<Investment>)`
+
+- **NewInvestmentFragment** -
+  ##### Methods
+  - `checkApplication()`
+  - `onApplyInvestmentRequest()`
+- **ApplyLeaveFragment** -
+  ##### Methods
+  - `onApplyLeaveRequest()`
+- **LoanSignFragment** -
+  ##### Methods
+  - `submit()`
+  - `onLoanActivated()`
+- **DocumentFragment** -
+  ##### Methods
+  - `initFileField(file: File)`
+  - `getDocumentInputs() : DocumentRequest`
+  - `openFileExplorer()`
+  - `showPictureDialog()`
+  - `choosePhotoFromGallery()`
+  - `takePhotoFromCamera()`
+  - `saveImage(myBitmap: Bitmap): File?`
+- **LoanDocumentFragment** -
+  ##### Methods
+  - `save()`
+  - `addDocumentField()`
