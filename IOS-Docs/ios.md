@@ -113,13 +113,13 @@ SignInViewController - contains functions that handles user’s authentication. 
     - **CWStep3ViewController** - a view where the user can input their address information for wallet activation.  
     - **CWStep4ViewController** - a view where the user can input their employment information for wallet activation.  
     - **CWStep5ViewController** - a view where the user can upload their documents for wallet activation.  
-    - **LoanViewController** - contains functions where the user can see their list of active loans, know their upcoming due dates, know their credit limits and apply for loans.  
+- **LoanViewController** - contains functions where the user can see their list of active loans, know their upcoming due dates, know their credit limits and apply for loans.  
     - **LoanInactiveViewController** - a view which is only displayed if the user has not activated their loan account yet. It contains functions where user can choose to activate their application.  
     - **CLAStep1ViewController** - a view where the user can upload their documents for loan account activation.  
     - **CLAStep2a1SignatureAgreementViewController** - a view where the user is prompted for the terms and conditions when activating their loan accounts.  
     - **CLAStep2a2SignatureSignViewController** - a view where the user can sign for loan activation.  
     - **CLAStep2a3SignatureReviewViewController** - a view where the user can finalize their signature for loan activation. Upon submission, the user is prompted to wait for approval.  
-    - **ProfileViewController** - contains functions where the user can update their information.  
+- **ProfileViewController** - contains functions where the user can update their information.  
     - **ManageProfileViewController** - contains functions where the user can edit their profile information and image.  
     - **ChangePasswordViewController** - contains functions where the user can update their password.  
     - **ChangePINViewController** - contains functions where the user can update their PIN.  
