@@ -63,26 +63,31 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `initGoogleLogin() - initialize google sign in`
   - `signInGoogle() - trigger when sign in to google`
   - `handleSignInResult(completedTask: Task<GoogleSignInAccount>) - called when receive response from google sign in `
+  
 - **RegistrationActivity** - handles the registration
   ##### Methods
   - `saveInformation() - saves information to serve`
   - `onRegistered() - called when successfully saved to serve`
   - `onProvinces(provinces: List<Province>) - call when receive response when getting the list of province from the server`
   - `onCities(cities: List<City>) -  call when receive response when getting the list of city from the server`
+  
 - **ForgotPasswordActivity** - handles the forgot password
   ##### Methods
   - `resetPassword() - request to reset password to the server`
   - `onResetPassword() - called when successfully reset the password`
+  
 - **MainActivity** - container of all fragments after login
   ##### Methods
   - `initNavigation() - initialize the list of menus`
   - `replaceFragment(fragment: BaseFragment) - when replacing a fragment in the container for navigation`
   - `addFragment(fragment: BaseFragment) - when adding a fragment in the container for navigation`
   - `addFragmentNoBackStack(fragment: BaseFragment) - when adding a fragment with back stack in the container for navigation`
+  
 - **ProfileFragment** - handles the profile page
   ##### Methods
   - `initProfile() - populate all information in profile page`
   - `shareApp() - trigger when sharing the app`
+  
 - **WalletFragment** - handles the wallet page
   ##### Methods
   - `loginWallet() - trigger when login to wallet`
@@ -91,6 +96,7 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `onLock() - lock the wallet page`
   - `showTransactions() - call the list of transactions to the server`
   - `onRenderTransactions(transactions: List<Transaction>) - display the list of transaction from the server`
+  
 - **LoanDashboardFragment** - handles the dashboard
   ##### Methods
   - `showTransactions() - show all transactions`
@@ -100,6 +106,7 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `getOtherLoans(): List<LoanResponse> - filter all the other loans`
   - `getDueLoans(): List<LoanResponse> - filter all due loans`
   - `createDataSeries(currentValue: Float, maxValue: Float) - initialize the UI progress circle`
+  
 - **CashAdvanceHrisAllFragment** - handles the list of all cash advances (HR Admin)
   ##### Methods
   - `onSearch(keyword: String) - filter the list of cash advance`
@@ -112,80 +119,92 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `initCashAdvance() - initialize the list of cash advances`
   - `onRenderCashAdvances(cashAdvanceList: List<CashAdvance>) - display the list of cash advances`
   - `onSelectedCashAdvance(cashAdvance: CashAdvance) - show the details of cash advance`
+  
 - **CashAdvanceDetailsHrisFragment** - - handles the display of cash advance detail(HR Admin) 
   ##### Methods
   - `initCashAdvances() - display the details of cash advance`
   - `approveCashAdvance(id: Int) - server call to approve the cash advance`
   - `declineCashAdvance(id: Int) - server call to decline the cash advance`
+  
 - **EmployeeHrisDashboardFragment** - handles the display of employees in the dashboard (HR Admin)
   ##### Methods
   - `onRenderEmployees(employees: List<Employee>) - show the list of employees`
   - `getTotalEmployeeSize(): Int - get the size of employees`
+  
 - **EmployeeHrisFragment** - handles the display of all employees (HR Admin)
   ##### Methods
   - `initEmployee() - prepare the adapter and recyclerview`
   - `onSearch(keyword: String) - filter the list of employees`
   - `onRenderEmployees(employees: List<Employee>) - display the list of employees`
+  
 - **LeaveHrisAllFragment** - display the list of all leave applications
   ##### Methods
   - `onSearch(fromDate: Date?, toDate: Date?) - filter the list by date range`
   - `onSelectedLeave(leave: Leave) - show the details of leave application`
   - `onRenderLeaves(leaves: List<Leave>) - show the list of leave application`
+  
 - **LeaveHrisDashboardFragment** -
   ##### Methods
   - `initLeave() - initialize the leave list adapter and recyclerview`
   - `onSelectedLeave(leave: Leave) - show the details of leave application`
   - `onRenderLeaves(leaves: List<Leave>) - show the list of leave application`
+  
 - **LeaveDetailsHrisFragment** - display the details of leave application
   ##### Methods
   - `initLeaves() - show the details of leave application`
+  
 - **OvertimeHrisAllFragment** - display the list of overtime requests (HR Admin)
   ##### Methods
   - `onSearch(fromDate: Date?, toDate: Date?) - filter the list by date range`
   - `onSelectedOvertime(overtime: Overtime) - to show the details of overtime request`
-- **OvertimeHrisDashboardFragment** -
+  
+- **OvertimeHrisDashboardFragment** - handles the Overtime request dashboard (HR Admin)
   ##### Methods
-  - `onRenderOvertimes(overtimes: List<Overtime>)`
-  - `onSelectedOvertime(overtime: Overtime)s`
-- **OvertimeDetailsHrisFragment** -
+  - `onRenderOvertimes(overtimes: List<Overtime>) - display the list of overtime requests`
+  - `onSelectedOvertime(overtime: Overtime) - to show the details of overtime request`
+  
+- **OvertimeDetailsHrisFragment** - handles the overtime details page (HR Admin)
   ##### Methods
-  - `initOvertimes()`
-- **PayslipDetailsHrisFragment** -
+  - `initOvertimes() - show the details of overtime`
+  
+- **PayslipDetailsHrisFragment** - handles the display of payslip details
   ##### Methods
-  - `initPayslips()`
-- **PayslipDetailsHrisFragment** -
+  - `initPayslips() - show payslip details`
+  
+- **PayslipsHrisAllFragment** - display all the list of payslips
   ##### Methods
-  - `initPayslips()`
-- **PayslipsHrisAllFragment** -
-  ##### Methods
-  - `onSearch(keyword: String)`
-  - `initPayslips()`
-  - `onRenderPayslips(payslips: List<Payslip>)`
-  - `onSelectedPayslip(payslips: Payslip)`
-  ##### Methods
+  - `onSearch(keyword: String) - filter the list of payslip`
+  - `initPayslips() - initialize adpater and recyclerview`
+  - `onRenderPayslips(payslips: List<Payslip>) - display the list of payslips`
+  - `onSelectedPayslip(payslips: Payslip) - to show payslip details`
   - `getPayslips()`
   - `getPayslipsByEmployee(employeeCode : String)`
-- **TimesheetDetailsHrisFragment** -
+  
+- **TimesheetDetailsHrisFragment** - handles the display of timelog details
   ##### Methods
-  - `initTimelogs()`
-- **TimesheetHrisAllFragment** -
+  - `initTimelogs() - populate the details of timesheet`
+  
+- **TimesheetHrisAllFragment** - handles the listing of all timelogs (HR Admin)
   ##### Methods
-  - `onSearch(keyword: String)`
-  - `onRenderTimesheets(timesheets: List<TimeLog>)`
-  - `onSelectedTimesheet(timesheet: TimeLog)`
-- **BankListFragment** -
+  - `onSearch(keyword: String) - filter the list of timelogs`
+  - `onRenderTimesheets(timesheets: List<TimeLog>) - render the list of timesheets`
+  - `onSelectedTimesheet(timesheet: TimeLog) - to display the list of selected timesheet`
+  
+- **BankListFragment** - handles the display of bank list
   ##### Methods
-  - `initBanks()`
-  - `onSearch(keyword: String)`
-  - `onRenderBanks(banks: List<Bank>)`
-  - `onSelectedBank(bank: Bank)`
-- **BillerListFragment** -
+  - `initBanks() - initialize adapter and recyclerview`
+  - `onSearch(keyword: String) - filter the list of banks`
+  - `onRenderBanks(banks: List<Bank>) - render the list of bank`
+  - `onSelectedBank(bank: Bank) - trigger when selecting a bank`
+  
+- **BillerListFragment** - handles the list of billers
   ##### Methods
-  - `initBillers()`
-  - `onSearch(keyword: String)`
-  - `onRenderBillers(billers: List<Biller>)`
-  - `onSelectedBiller(biller: Biller)`
-- **CashAdvanceFragment** -
+  - `initBillers() - initialize the adapter and recyclerview`
+  - `onSearch(keyword: String) - filter the list of billers`
+  - `onRenderBillers(billers: List<Biller>) - render the list of billers`
+  - `onSelectedBiller(biller: Biller) - trigger when selecting a biller`
+  
+- **CashAdvanceFragment** - 
   ##### Methods
   - `onApplyCashAdvance()`
 - **AddContactFragment** -
