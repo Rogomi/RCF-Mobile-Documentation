@@ -204,53 +204,59 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `onRenderBillers(billers: List<Biller>) - render the list of billers`
   - `onSelectedBiller(biller: Biller) - trigger when selecting a biller`
   
-- **CashAdvanceFragment** - 
+- **CashAdvanceFragment** - handle the cash advance form
   ##### Methods
-  - `onApplyCashAdvance()`
-- **AddContactFragment** -
+  - `onApplyCashAdvance() - submit the application to server`
+  
+- **AddContactFragment** - handle the adding of contact
   ##### Methods
-  - `checkValidEmail()`
-  - `onAddContact()`
-- **RecipientsListFragment** -
+  - `checkValidEmail() - validate the inputted email`
+  - `onAddContact() - trigger when successfully added the contact`
+  
+- **RecipientsListFragment** - handles the list of recipients
   ##### Methods
-  - `initRecipients()`
-  - `onRenderWalletContacts(walletContacts: List<WalletContact>)`
-  - `onSelectedRecipient(walletContact: WalletContact)`
-- **SendFundFragment** -
+  - `initRecipients() - initialize the adapter and recyclerview`
+  - `onRenderWalletContacts(walletContacts: List<WalletContact>) - list all wallet contacts`
+  - `onSelectedRecipient(walletContact: WalletContact) - trigger when selecting a contact`
+- **SendFundFragment** - handles the send fund page
   ##### Methods
-  - `addField()`
-- **SendIndividualFundFragment** -
+  - `addField() - trigger when adding multiple recipients`
+
+- **AddFundsFragment** - handles the add fund page
   ##### Methods
-  - `getValueRequest(): SendFundRequest`
-- **AddFundsFragment** -
+  - `openUrl(url: String) - load the webview of adding fund`
+  
+- **InvestmentsFragment** - handles the investments page
   ##### Methods
-  - `openUrl(url: String)`
-- **InvestmentsFragment** -
+  - `checkWallet() - check if wallet is active`
+  - `initInvestments() - initailize adapter and recyclerview`
+  - `onGetInvestments(investments: List<Investment>) - display the list of investments`
+  
+- **NewInvestmentFragment** - handles the investment form
   ##### Methods
-  - `checkWallet()`
-  - `initInvestments()`
-  - `onGetInvestments(investments: List<Investment>)`
-- **NewInvestmentFragment** -
+  - `checkApplication() - display the application details`
+  - `onApplyInvestmentRequest() - submit application to server`
+  
+- **ApplyLeaveFragment** - handles apply leave form
   ##### Methods
-  - `checkApplication()`
-  - `onApplyInvestmentRequest()`
-- **ApplyLeaveFragment** -
+  - `onApplyLeaveRequest() - submit application to server`
+  
+- **LoanSignFragment** - handles the loan signature form
   ##### Methods
-  - `onApplyLeaveRequest()`
-- **LoanSignFragment** -
+  - `submit() - submit the loan application`
+  - `onLoanActivated() - receive the response of the application from the server`
+  
+- **DocumentFragment** - handles upload documents form
   ##### Methods
-  - `submit()`
-  - `onLoanActivated()`
-- **DocumentFragment** -
+  - `initFileField(file: File) - initialize form`
+  - `getDocumentInputs() : DocumentRequest - get the documents input to be sent to server`
+  - `openFileExplorer() - show file explorer`
+  - `showPictureDialog() - show dialog chooser`
+  - `choosePhotoFromGallery() - open photo gallery`
+  - `takePhotoFromCamera() - open camera`
+  - `saveImage(myBitmap: Bitmap): File? - save image to memory`
+  
+- **LoanDocumentFragment** - handles the list of documents to be uploaded
   ##### Methods
-  - `initFileField(file: File)`
-  - `getDocumentInputs() : DocumentRequest`
-  - `openFileExplorer()`
-  - `showPictureDialog()`
-  - `choosePhotoFromGallery()`
-  - `takePhotoFromCamera()`
-  - `saveImage(myBitmap: Bitmap): File?`
-- **LoanDocumentFragment** -
-  ##### Methods
-  - `save()`
-  - `addDocumentField()`
+  - `save() - save the documents to sever`
+  - `addDocumentField() - handles the dynamic adding of document fragments`
