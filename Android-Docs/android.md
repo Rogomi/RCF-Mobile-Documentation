@@ -49,16 +49,7 @@ Most of the third-party libraries are integrated using Gradle. They can be added
 #### Main Utilities
 
 - **RetrofitBuilder** - a class which contains the network settings (i.e timeout span).
-
-  ##### Methods
-
-  - `buildAuth(appPreferences: AppPreferences): Retrofit`
-  - `build(): Retrofit`
-  - `build(appPreferences: AppPreferences): Retrofit`
-
 - **AppPreferences** - handles the storing of simple data such as user name, if user login, etc.
-  ##### Methods
-  -
 - **ApiService** - a class which contains the endpoints call. what kind of httprequest, the parameters to be passed, response type.
 - **ApiEndpoint** - a class which contains the constant endpoint strings
 
