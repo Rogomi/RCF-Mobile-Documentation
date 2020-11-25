@@ -85,10 +85,14 @@ QRCodeReader.swift - used to scan QR codes from other user when sending funds
 - **RCFWeb.Endpoint** - a customized enum type that enlists the routes interfaced from the web API and makes use of Alamofire to connect. It dynamically loads the endpoints with set parameters, methods and headers.  
 - **Models Swift Files** - contains the model classes with their functions that returns different values and statements to be used as output for views.
  
+ 
 **View Controllers**
+
 - **RCFViewController** - child view controllers will inherit this class to avoid code rewrites when the views are loading or about to appear. It also contains global functions to be reused throughout the development.  
+
 - **AppTabBarController** - contains functions to handle the startup operations.  
 SignInViewController - contains functions that handles user’s authentication. It has different ways to login besides using email & password, such as Logging in with Facebook, Google or Apple ID. It also handles logins using TouchID/FaceID.  
+
 - **SignUpViewController** - contains functions that handles user’s registration. It contains the form fields where the user can fill their information up.  
   ##### Methods
   - `signUp()`
@@ -101,32 +105,40 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `addTapGestureToSelectionFields()`
   - `textFieldShouldBeginEditing()`
   - `textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String)`
+
 - **TNCContainerViewController** - a view controller where the user can read the Terms of Usage/Privacy Policy upon signing up.  
   ##### Methods
   - `addOverlay()`
   - `removeOverlay()`
+
 - **VerifyEmailViewController** - contains a message that is indicated after the user signs up. The user can also resend the verification email using this page.  
   ##### Methods
   - `didTapResendLabel(_ sender: Any)`
   - `didTapBackToLoginButton(_ sender: Any)`
+
 - **ForgotPasswordViewController** - a view controller where the user can choose to reset their password. After inserting the email address, the app will connect with the Web API to send the reset password email to the user.  
   ##### Methods
   - `didTapResetPassword(_ sender: Any)`
   - `didTapBackToLoginButton(_ sender: Any)`
+
 - **CheckInboxViewController** - contains a message that is indicated after the users use the Forgot Password feature.  
   ##### Methods
   - `didTapBackToLoginButton(_ sender: Any)`
+
 - **WalletViewController** - contains functions where the user can unlock their wallet, check their balance, recent transactions, open specific features of the app like sending funds, withdrawing funds, paying bills and other options.  
+
 - **AddFundsViewController** - a view controller that contains a form where the user can specify the amount and type of service to be used when adding funds.  
   ##### Methods
   - `getLabel()`
   - `didUpdateWalletSession(_ sender: Any)`
   - `openPINAlert(request: AddFundRequest, completion: @escaping(URL) -> Void)`
   - `textFieldShouldBeginEditing(_ textField: UITextField)`
+
 - **AddFundsWebViewController** - a view controller that contains the web view where Dragon pay is opened and the user specifies their banks where to get the funds from.  
   ##### Methods
   - `didUpdateWalletSession(_ sender: Any)`
   - `webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void)`
+
 - **SendFundsViewController** - a view controller where the user can send specific amount to other users  
   ##### Methods
   - `didUpdateWalletSession(_ sender: Any)`
@@ -137,6 +149,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `addRecipientView(hidesRemoveButton: Bool = false)`
   - `refreshSeparators()`
   - `textFieldShouldBeginEditing(_ textField: UITextField)`
+
 - **PayBillsViewController** - a view controller where the user can choose to pay bills on specific billers. 
   ##### Methods
   - `didUpdateWalletSession(_ sender: Any)`
@@ -151,10 +164,12 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `updateBalance()`
   - `loadBanks()`
   - `loadPurposes()`
+
 - **RequestFundsViewController** - a view controller where the user can request funds from other users.  
   ##### Methods
   - `didUpdateWalletSession(_ sender: Any)`
   - `didTapNextButton(_ sender: Any)`
+
 - **MyCodeViewController** - a view controller where the user can see their QR Code image and be able to save or share it with other people.  
   ##### Methods
   - `didUpdateWalletSession(_ sender: Any)`
@@ -203,24 +218,30 @@ SignInViewController - contains functions that handles user’s authentication. 
 - **AddContactViewController** - a view where the user can input another user’s information so they can add them as contact.  
   ##### Methods
   - `didTapNextButton(_ sender: Any)`
+
 - **ScanQRContactViewController** - a view that contains a QR Scanner and is used when adding other users using their respective QR Codes as displayed from MyCodeViewController. 
   ##### Methods
   - `checkScanPermissions()`
+
 - **CWStep1ViewController** - a view where the user can start their wallet activation. It contains fields that mostly hold the user’s personal information for wallet activation.  
+
   ##### Methods
   - `didTapNextButton(_ sender: Any)`
   - `refreshFields()`
   - `textFieldShouldBeginEditing(_ textField: UITextField)`
+
 - **CWStep2ViewController** - a view where the user can input their contact numbers for wallet activation.  
   ##### Methods
   - `didTapNextButton(_ sender: Any)`
   - `refreshFields()`
   - `textFieldShouldBeginEditing(_ textField: UITextField)`
+
 - **CWStep3ViewController** - a view where the user can input their address information for wallet activation.  
   ##### Methods
   - `didTapNextButton(_ sender: Any)`
   - `refreshFields()`
   - `textFieldShouldBeginEditing(_ textField: UITextField)`
+
 - **CWStep4ViewController** - a view where the user can input their employment information for wallet activation.  
   ##### Methods
   - `didTapNextButton(_ sender: Any)`
@@ -235,6 +256,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `openPasswordAlert(completion: @escaping(String?) -> Void)`
   - `documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL])`
   - `documentPickerWasCancelled(_ controller: UIDocumentPickerViewController)`
+
 - **LoanViewController** - contains functions where the user can see their list of active loans, know their upcoming due dates, know their credit limits and apply for loans.
   ##### Methods
   - `didRefreshDashboard(_ sender: Any)`
@@ -263,12 +285,14 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int`
   - `collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell`
   - `collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize`
+
 - **CLAStep1ViewController** - a view where the user can upload their documents for loan account activation.  
   ##### Methods
   - `refreshFields()`
   - `addDocumentFormView(hidesRemoveButton: Bool = false) -> DocumentFormView?`
   - `documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL])`
   - `documentPickerWasCancelled(_ controller: UIDocumentPickerViewController)`
+
 - **CLAStep2a1SignatureAgreementViewController** - a view where the user is prompted for the terms and conditions when activating their loan accounts.  
   ##### Methods
   - `didTapSaveButton(_ sender: Any)`
@@ -285,7 +309,6 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapStartSigningView(_ sender: Any)`
   - `didTapNextButton(_ sender: Any)`
 
-
 - **CLAStep2a3SignatureReviewViewController** - a view where the user can finalize their signature for loan activation. Upon submission, the user is prompted to wait for approval.  
   ##### Methods
   - `didTapTNCLabel(_ sender: Any)`
@@ -293,7 +316,6 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapSubmitButton(_ sender: Any)`
 - **ProfileViewController** - contains functions where the user can update their information.
   ##### Methods 
-  - `viewWillAppear(_ animated: Bool)`
   - `didTapManageProfileButton(_ sender: Any)`
   - `didTapChangePasswordButton(_ sender: Any)`
   - `didTapNotificationButton(_ sender: Any)`
@@ -304,11 +326,9 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapLogoutButton(_ sender: Any)`
   - `shareTextButton()`
   - `presentVC(withIdentifier identifier: String)`
+
 - **ManageProfileViewController** - contains functions where the user can edit their profile information and image.  
   ##### Methods
-  - `viewDidLoad()`
-  - `viewWillAppear(_ animated: Bool)`
-  - `viewDidAppear(_ animated: Bool)`
   - `didTapCameraButton(_ sender: UIButton)`
   - `didTapSaveButton(_ sender: Any)`
   - `refreshFields()`
@@ -321,25 +341,24 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `textFieldShouldBeginEditing(_ textField: UITextField) -> Bool`
   - `image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer)`
   - `func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])`
+
 - **ChangePasswordViewController** - contains functions where the user can update their password.  
   ##### Methods
-  - `viewDidLoad()`
   - `didTapChangePasswordButton(_ sender: Any)`
   - `saveNewPassword()`
+
 - **ChangePINViewController** - contains functions where the user can update their PIN. 
   ##### Methods
-  - `viewDidLoad()`
   - `didTapChangePINButton(_ sender: Any)`
   - `saveNewPIN()`
+  
 - **TermsPrivacyViewController** - contains a page of terms and conditions/privacy policy for the users to read.  
   ##### Methods
-  - `viewDidLoad()`
   - `viewDidLayoutSubviews()`
   - `didTapBackBarButtonItem(_ sender: Any)`
+
 - **DigitalSignOnSettingsViewController** - contains functions where the user can choose to enable signing in using their TouchID/FaceID.  
   ##### Methods
-  - `viewDidLoad()`
-  - `viewWillAppear(_ animated: Bool)`
   - `didTapBackBarButtonItem(_ sender: Any)`
   - `didChangeSwitchState(_ sender: UISwitch)`
   - `toggleSwitchControl()`
