@@ -58,98 +58,91 @@ Most of the third-party libraries are integrated using Gradle. They can be added
 - **SplashActivity** - handles the Splash page
 - **LoginActivity** - handles the Login Page
   ##### Methods
-  - `printKeyHash()`
-  - `signIn()`
-  - `initFacebookLogin()`
-  - `initGoogleLogin()`
-  - `signInGoogle()`
-  - `handleSignInResult(completedTask: Task<GoogleSignInAccount>)`
+  - `signIn() - trigger when tap the sign in button `
+  - `initFacebookLogin() - initialize the facebook login`
+  - `initGoogleLogin() - initialize google sign in`
+  - `signInGoogle() - trigger when sign in to google`
+  - `handleSignInResult(completedTask: Task<GoogleSignInAccount>) - called when receive response from google sign in `
 - **RegistrationActivity** - handles the registration
   ##### Methods
-  - `saveInformation()`
-  - `onRegistered()`
-  - `onProvinces(provinces: List<Province>)`
-  - `onCities(cities: List<City>)`
+  - `saveInformation() - saves information to serve`
+  - `onRegistered() - called when successfully saved to serve`
+  - `onProvinces(provinces: List<Province>) - call when receive response when getting the list of province from the server`
+  - `onCities(cities: List<City>) -  call when receive response when getting the list of city from the server`
 - **ForgotPasswordActivity** - handles the forgot password
   ##### Methods
-  - `resetPassword()`
-  - `onResetPassword()`
+  - `resetPassword() - request to reset password to the server`
+  - `onResetPassword() - called when successfully reset the password`
 - **MainActivity** - container of all fragments after login
   ##### Methods
-  - `initNavigation()`
-  - `replaceFragment(fragment: BaseFragment)`
-  - `addFragment(fragment: BaseFragment)`
-  - `addFragmentNoBackStack(fragment: BaseFragment)`
+  - `initNavigation() - initialize the list of menus`
+  - `replaceFragment(fragment: BaseFragment) - when replacing a fragment in the container for navigation`
+  - `addFragment(fragment: BaseFragment) - when adding a fragment in the container for navigation`
+  - `addFragmentNoBackStack(fragment: BaseFragment) - when adding a fragment with back stack in the container for navigation`
 - **ProfileFragment** - handles the profile page
   ##### Methods
-  - `initProfile()`
-  - `shareApp()`
+  - `initProfile() - populate all information in profile page`
+  - `shareApp() - trigger when sharing the app`
 - **WalletFragment** - handles the wallet page
   ##### Methods
-  - `loginWallet()`
-  - `onWalletLoggedIn(walletLoginData: WalletLoginData)`
-  - `onGetWalletBalance(walletBalanceData: WalletBalanceData)`
-  - `onLock()`
-  - `showTransactions()`
-  - `onRenderTransactions(transactions: List<Transaction>)`
+  - `loginWallet() - trigger when login to wallet`
+  - `onWalletLoggedIn(walletLoginData: WalletLoginData) - called when successfully logged in to wallet`
+  - `onGetWalletBalance(walletBalanceData: WalletBalanceData) - display the wallet balance from the server`
+  - `onLock() - lock the wallet page`
+  - `showTransactions() - call the list of transactions to the server`
+  - `onRenderTransactions(transactions: List<Transaction>) - display the list of transaction from the server`
 - **LoanDashboardFragment** - handles the dashboard
   ##### Methods
-  - `showTransactions()`
-  - `onRenderLoans(data: List<LoanResponse>?)`
-  - `onRenderLoanCredit(loanCredit: LoanCredit)`
-  - `getActiveLoans(): List<LoanResponse>`
-  - `getOtherLoans(): List<LoanResponse>`
-  - `getDueLoans(): List<LoanResponse>`
-  - `createDataSeries(currentValue: Float, maxValue: Float)`
-- **FundsFragment** - handles the wallet transactions
-- **CashAdvanceHrisAdapter** -
-- **CashAdvanceHrisAllFragment** -
+  - `showTransactions() - show all transactions`
+  - `onRenderLoans(data: List<LoanResponse>?) - render all types of loans list `
+  - `onRenderLoanCredit(loanCredit: LoanCredit) - display the available and limit credit`
+  - `getActiveLoans(): List<LoanResponse> - filter all the active loans`
+  - `getOtherLoans(): List<LoanResponse> - filter all the other loans`
+  - `getDueLoans(): List<LoanResponse> - filter all due loans`
+  - `createDataSeries(currentValue: Float, maxValue: Float) - initialize the UI progress circle`
+- **CashAdvanceHrisAllFragment** - handles the list of all cash advances (HR Admin)
   ##### Methods
-  - `onSearch(keyword: String)`
-  - `initCashAdvance()`
-  - `onRenderCashAdvances(cashAdvanceList: List<CashAdvance>)`
-  - `onSelectedCashAdvance(cashAdvance: CashAdvance)`
-- **CashAdvanceHrisDashboardFragment** -
+  - `onSearch(keyword: String) - filter the list of cash advance`
+  - `initCashAdvance() - initialize the list of cash advances`
+  - `onRenderCashAdvances(cashAdvanceList: List<CashAdvance>) - display the list of cash advances`
+  - `onSelectedCashAdvance(cashAdvance: CashAdvance) - show the details of cash advance`
+- **CashAdvanceHrisDashboardFragment** - handles the cash advances dashboard(HR Admin) 
   ##### Methods
-  - `initEmployeeFragment()`
-  - `initCashAdvance()`
-  - `onRenderCashAdvances(cashAdvances: List<CashAdvance>)`
-  - `onSelectedCashAdvance(cashAdvance: CashAdvance)`
+  - `initEmployeeFragment() - show the list of employees in the header`
+  - `initCashAdvance() - initialize the list of cash advances`
+  - `onRenderCashAdvances(cashAdvanceList: List<CashAdvance>) - display the list of cash advances`
+  - `onSelectedCashAdvance(cashAdvance: CashAdvance) - show the details of cash advance`
+- **CashAdvanceDetailsHrisFragment** - - handles the display of cash advance detail(HR Admin) 
   ##### Methods
-  - `getCashAdvance()`
-- **CashAdvanceDetailsHrisFragment** -
+  - `initCashAdvances() - display the details of cash advance`
+  - `approveCashAdvance(id: Int) - server call to approve the cash advance`
+  - `declineCashAdvance(id: Int) - server call to decline the cash advance`
+- **EmployeeHrisDashboardFragment** - handles the display of employees in the dashboard (HR Admin)
   ##### Methods
-  - `initCashAdvances()`
+  - `onRenderEmployees(employees: List<Employee>) - show the list of employees`
+  - `getTotalEmployeeSize(): Int - get the size of employees`
+- **EmployeeHrisFragment** - handles the display of all employees (HR Admin)
   ##### Methods
-  - `approveCashAdvance(id: Int)`
-  - `declineCashAdvance(id: Int)`
-- **EmployeeHrisDashboardFragment** -
+  - `initEmployee() - prepare the adapter and recyclerview`
+  - `onSearch(keyword: String) - filter the list of employees`
+  - `onRenderEmployees(employees: List<Employee>) - display the list of employees`
+- **LeaveHrisAllFragment** - display the list of all leave applications
   ##### Methods
-  - `onRenderEmployees(employees: List<Employee>)`
-  - `getTotalEmployeeSize(): Int`
-- **EmployeeHrisFragment** -
-  ##### Methods
-  - `initEmployee()`
-  - `onSearch(keyword: String)`
-  - `onRenderEmployees(employees: List<Employee>)`
-  ##### Methods
-  - `getEmployee()`
-- **LeaveHrisAllFragment** -
-  ##### Methods
-  - `onSearch(fromDate: Date?, toDate: Date?)`
-  - `onSelectedLeave(leave: Leave)`
+  - `onSearch(fromDate: Date?, toDate: Date?) - filter the list by date range`
+  - `onSelectedLeave(leave: Leave) - show the details of leave application`
+  - `onRenderLeaves(leaves: List<Leave>) - show the list of leave application`
 - **LeaveHrisDashboardFragment** -
   ##### Methods
-  - `initLeave()`
-  - `onRenderLeaves(leaves: List<Leave>)`
-  - `onSelectedLeave(leave: Leave)`
-- **LeaveDetailsHrisFragment** -
+  - `initLeave() - initialize the leave list adapter and recyclerview`
+  - `onSelectedLeave(leave: Leave) - show the details of leave application`
+  - `onRenderLeaves(leaves: List<Leave>) - show the list of leave application`
+- **LeaveDetailsHrisFragment** - display the details of leave application
   ##### Methods
-  - `initLeaves()`
-- **OvertimeHrisAllFragment** -
+  - `initLeaves() - show the details of leave application`
+- **OvertimeHrisAllFragment** - display the list of overtime requests (HR Admin)
   ##### Methods
-  - `onSearch(fromDate: Date?, toDate: Date?)`
-  - `onSelectedOvertime(overtime: Overtime)`
+  - `onSearch(fromDate: Date?, toDate: Date?) - filter the list by date range`
+  - `onSelectedOvertime(overtime: Overtime) - to show the details of overtime request`
 - **OvertimeHrisDashboardFragment** -
   ##### Methods
   - `onRenderOvertimes(overtimes: List<Overtime>)`
@@ -204,7 +197,6 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `initRecipients()`
   - `onRenderWalletContacts(walletContacts: List<WalletContact>)`
   - `onSelectedRecipient(walletContact: WalletContact)`
-- **FundsFragment** -
 - **SendFundFragment** -
   ##### Methods
   - `addField()`
