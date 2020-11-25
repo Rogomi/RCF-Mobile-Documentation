@@ -40,9 +40,9 @@ Most of the third-party libraries are integrated using Gradle. They can be added
 
 #### Important Libraries
 
-- Firebase/Crashlytics - used to report crashes from Users that are not encountered during development and debugging.
-- Coroutine - is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously.
-- Retrofit - is type-safe REST client for Android and Java which aims to make it easier to consume RESTful web services.
+- **Firebase/Crashlytics** - used to report crashes from Users that are not encountered during development and debugging.
+- **Coroutine** - is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously.
+- **Retrofit** - is type-safe REST client for Android and Java which aims to make it easier to consume RESTful web services.
 
 ### IMPORTANT CLASSES
 
