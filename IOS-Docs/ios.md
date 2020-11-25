@@ -184,20 +184,20 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `updateTransactions()`
   - `getFilteredTransactions()`
   - `selectCategoryFilter(_ category: CategoryFilter)`
-  - `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)`
-  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
 - **TransactionDetailsViewController** - a view controller where the user can see the details of the transaction they selected from the transactions list. It is also reused on specific transactions in the Wallet dashboard.  
   ##### Methods
   - `numberOfSections(in tableView: UITableView)`
-  - `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)`
-  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
 
 - **TransactionReviewViewController** - a view controller where the user can see a preview of their transaction before they are carried out.  
   ##### Methods
   -  `openPINAlert(completion: @escaping TransactionClosure)`
   - `numberOfSections(in tableView: UITableView)`
-  - `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)`
-  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
   - `hideSeparator()`
   - `showSeparator()`
   - `restoreSeparatorSpace()`
@@ -209,8 +209,8 @@ SignInViewController - contains functions that handles user’s authentication. 
   -  `updateRecipients()`
   - `refreshRecipientsTable()`
   - `numberOfSections(in tableView: UITableView)`
-  - `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)`
-  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
   - `searchBar(_ searchBar: UISearchBar, textDidChange searchText: String)` 
   - `searchBarSearchButtonClicked(_ searchBar: UISearchBar)`
   - `didTapAddNewContactButton(_ sender: Any)`
@@ -271,20 +271,20 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `updateLoans()`
   - `applyBalanceOnChart()`
   - `numberOfSections()`
-  - `tableView(_ tableView: UITableView, numberOfRowsInSection section: Int)`
-  - `tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)`
-  - `tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?`
-  - `tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat`
-  - `tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, estimatedHeightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
 
 - **LoanInactiveViewController** - a view which is only displayed if the user has not activated their loan account yet. It contains functions where user can choose to activate their application.  
   ##### Methods
   - `didTapApplyForALoan(_ sender: Any)`
   - `didTapCreateLoanAccountButton(_ sender: Any)`
   - `applyBalanceOnChart(_ usedBalance: Double, creditLimit: Double)`
-  - `collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int`
-  - `collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell`
-  - `collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize`
+  - `collectionView(_, numberOfItemsInSection section: Int) -> Int`
+  - `collectionView(_, cellForItemAt) -> UICollectionViewCell`
+  - `collectionView(_, sizeForItemAt) -> CGSize`
 
 - **CLAStep1ViewController** - a view where the user can upload their documents for loan account activation.  
   ##### Methods
@@ -340,7 +340,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `saveProfile()`
   - `textFieldShouldBeginEditing(_ textField: UITextField) -> Bool`
   - `image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer)`
-  - `func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])`
+  - `imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])`
 
 - **ChangePasswordViewController** - contains functions where the user can update their password.  
   ##### Methods
