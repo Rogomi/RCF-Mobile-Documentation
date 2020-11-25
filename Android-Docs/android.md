@@ -1,6 +1,6 @@
 [Back](../index.md)
 
-# Right Choice Finance
+# Right Choice Finance Android
 
 ## Technical Documentation
 
@@ -66,14 +66,12 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `handleSignInResult(completedTask: Task<GoogleSignInAccount>)`
 - **RegistrationActivity** - handles the registration
   ##### Methods
-  - `initPresenter()`
   - `saveInformation()`
   - `onRegistered()`
   - `onProvinces(provinces: List<Province>)`
   - `onCities(cities: List<City>)`
 - **ForgotPasswordActivity** - handles the forgot password
   ##### Methods
-  - `initLayout()`
   - `resetPassword()`
   - `onResetPassword()`
 - **MainActivity** - container of all fragments after login
@@ -85,12 +83,9 @@ Most of the third-party libraries are integrated using Gradle. They can be added
 - **ProfileFragment** - handles the profile page
   ##### Methods
   - `initProfile()`
-  - `initActions()`
   - `shareApp()`
 - **WalletFragment** - handles the wallet page
   ##### Methods
-  - `initContainers()`
-  - `initFields()`
   - `loginWallet()`
   - `onWalletLoggedIn(walletLoginData: WalletLoginData)`
   - `onGetWalletBalance(walletBalanceData: WalletBalanceData)`
@@ -99,7 +94,6 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `onRenderTransactions(transactions: List<Transaction>)`
 - **LoanDashboardFragment** - handles the dashboard
   ##### Methods
-  - `initContainers()`
   - `showTransactions()`
   - `onRenderLoans(data: List<LoanResponse>?)`
   - `onRenderLoanCredit(loanCredit: LoanCredit)`
@@ -182,13 +176,10 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   ##### Methods
   - `initTimelogs()`
 - **TimesheetHrisAllFragment** -
-
   ##### Methods
-
   - `onSearch(keyword: String)`
   - `onRenderTimesheets(timesheets: List<TimeLog>)`
   - `onSelectedTimesheet(timesheet: TimeLog)`
-
 - **BankListFragment** -
   ##### Methods
   - `initBanks()`
@@ -224,13 +215,10 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   ##### Methods
   - `openUrl(url: String)`
 - **InvestmentsFragment** -
-
   ##### Methods
-
   - `checkWallet()`
   - `initInvestments()`
   - `onGetInvestments(investments: List<Investment>)`
-
 - **NewInvestmentFragment** -
   ##### Methods
   - `checkApplication()`
