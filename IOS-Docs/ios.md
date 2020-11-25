@@ -92,6 +92,12 @@ QRCodeReader.swift - used to scan QR codes from other user when sending funds
 
 - **AppTabBarController** - contains functions to handle the startup operations.  
 SignInViewController - contains functions that handles user’s authentication. It has different ways to login besides using email & password, such as Logging in with Facebook, Google or Apple ID. It also handles logins using TouchID/FaceID.  
+  ##### Methods
+  - `reloadTabs()`
+  - `openAuthVC(animated: Bool = true)`
+  - `tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool`
+  - `triggerWillSwitchEventOnLoansTab()`
+  - `triggerWillSwitchEventOnInvestmentTab()`
 
 - **SignUpViewController** - contains functions that handles user’s registration. It contains the form fields where the user can fill their information up.  
   ##### Methods
@@ -126,6 +132,28 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapBackToLoginButton(_ sender: Any)`
 
 - **WalletViewController** - contains functions where the user can unlock their wallet, check their balance, recent transactions, open specific features of the app like sending funds, withdrawing funds, paying bills and other options.  
+  ##### Methods
+  - `viewDidLayoutSubviews()`
+  - `didUpdateWalletSession(_ sender: Any)`
+  - `didRefreshDashboard(_ sender: Any)`
+  - `didTapCreateWalletButton(_ sender: Any)`
+  - `didTapUnlockWalletButton(_ sender: Any)`
+  - `didTapYourTransactionsLabel(_ sender: Any)`
+  - `didTapSeeMoreButton(_ sender: Any)`
+  - `refreshOptionsCollection()`
+  - `refreshTransactionsTable()`
+  - `resetWalletValues()`
+  - `updateWalletScreen()`
+  - `updateWalletBalance()`
+  - `updateTransactions()`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, heightForRowAt) -> CGFloat`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+  - `collectionView(_, numberOfItemsInSection) -> Int`
+  - `collectionView(_, cellForItemAt) -> UICollectionViewCell`
+  - `collectionView(_, didSelectItemAt)`
+  - `collectionView(_, layout, sizeForItemAt) -> CGSize`
 
 - **AddFundsViewController** - a view controller that contains a form where the user can specify the amount and type of service to be used when adding funds.  
   ##### Methods
