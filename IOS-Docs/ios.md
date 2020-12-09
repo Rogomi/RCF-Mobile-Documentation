@@ -392,3 +392,20 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `toggleSwitchControl()`
   - `func turnOnDigitalSignOn()`
   - `turnOffDigitalSignOn()`
+
+
+  ### DIAGRAM
+
+  ![Application Architecture](diagram.png 'Application Architecture')
+
+  #### **Model**
+
+  Models encapsulates a particular set of data, and contains logic to manipulate the data. Models are contained within the Models folder of the RCF application source code
+
+  #### **View**
+
+  Views are the interface/s the user can see and interact with. Objects like UI Button, UIView and UILabel are examples of views. Views can be found in the Storyboards folder of the RCF application source code
+
+  #### **Controller**
+
+  Controllers controlls all logic that goes between the View and the Model. Objects like UIViewController, CLLocationManager and UINavigationController are examples of controllers. Controllers can be found in the ViewControllers folder of the RCF application source code
