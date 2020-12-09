@@ -234,7 +234,7 @@ Most of the third-party libraries are integrated using Gradle. They can be added
 
   ### DIAGRAM
 
-  ![Application Architecture](diagram.jpg 'Application Architecture')
+  ![Application Architecture](dia.png 'Application Architecture')
 
   #### **Model**
 
