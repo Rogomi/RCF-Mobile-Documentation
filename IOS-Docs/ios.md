@@ -668,36 +668,63 @@ SignInViewController - contains functions that handles user’s authentication. 
 
 - **InvestmentViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `didTapApplyForInvestment(_ sender: Any)`
+  - `refreshInvestments()`
+  - `numberOfSections()`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, didSelectRowAt) -> CGFloat`
   
 - **InactiveInvestmentViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `didTapApplyForInvestment(_ sender: Any)`
+  - `showNotice()`
 
 - **ApplyInvestmentViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `setTextFieldsTappable(in view: UIView)`
+  - `didTapTextField(_ tap: UITapGestureRecognizer)`
+  - `calculateInvestment()`
 
 - **ApplyInvestmentSummaryViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
 
 - **ApplyInvestmentStep2ViewController** - 
   ##### Methods
+  - `didTapAddDocumentButton(_ sender: Any)`
   - `didTapBackButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `refreshFields()`
+  - `addDocumentFormView(hidesRemoveButton: Bool = false) -> DocumentFormView?`
+  - `documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL])`
+  - `documentPickerWasCancelled(_ controller: UIDocumentPickerViewController)`
 
 - **ApplyInvestmentStep3StartViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
+  - `didTapDownloadPromissoryNoteButton(_ sender: Any)`
+  - `didTapDownloadAmortizationScheduleButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `savePDF(name: String,from url: URL)`
 
 - **ApplyInvestmentStep3SignatureViewController** - 
-  ##### Methods
   - `didTapBackButton(_ sender: Any)`
+  - `didTapRedoButton(_ sender: Any)`
+  - `didTapStartSigningView(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
 
 - **ApplyInvestmentStep3SubmitViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
-
+  - `didTapDownloadPromissoryNoteButton(_ sender: Any)`
+  - `didTapDownloadAmortizationScheduleButton(_ sender: Any)`
+  - `didTapSubmitButton(_ sender: Any)`
+  - `savePDF(name: String,from url: URL)`
+  
 - **InvestmentDetailsViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
