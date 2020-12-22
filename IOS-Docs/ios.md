@@ -431,30 +431,57 @@ SignInViewController - contains functions that handles user’s authentication. 
 - **ApplyCashAdvanceSignatureViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
+  - `didTapRedoButton(_ sender: Any)`
+  - `didTapStartSigningView(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
 
 - **ApplyCashAdvanceSubmitViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
+  - `didTapDownloadButton(_ sender: Any)`
+  - `savePDF(from url: URL)`
+  - `didTapSubmitButton(_ sender: Any)`
 
 - **ApplyPaydayLoanViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `didTapPencilButton(_ sender: Any)`
+  - `didChangeSliderValue(_ sender: UISlider)`
+  - `didTapSubmitButton(_ sender: Any)`
+  - `setTextFieldsTappable(in view: UIView)`
+  - `didTapTextField(_ tap: UITapGestureRecognizer)`
+  - `updateCurrentAmount(_ amount: Float, sender: UIView)`
+  - `refreshTimer(_ sender: UIView? = nil)`
+  - `refreshCalculation(_ sender: UIView? = nil)`
+  - `resetCalculatorView()`
 
 - **ApplyPaydayLoanReviewViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `proceedToAgreement()`
 
 - **ApplyPaydayLoanAgreementViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
+  - `didTapDownloadPromissoryNoteButton(_ sender: Any)`
+  - `didTapDownloadAmortizationScheduleButton(_ sender: Any)`
+  - `didTapStartSigningButton(_ sender: Any)`
+  - `savePDF(from url: URL)`
 
 - **ApplyPaydayLoanSignatureViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
+  - `didTapRedoButton(_ sender: Any)`
+  - `didTapStartSigningView(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
 
 - **ApplyPaydayLoanSubmitViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
+  - `didTapDownloadPromissoryNoteButton(_ sender: Any)`
+  - `didTapDownloadAmortizationScheduleButton(_ sender: Any)`
+  - `didTapSubmitButton(_ sender: Any)`
+  - `savePDF(from url: URL)`
 
 - **PayrollViewController** - 
   ##### Methods
