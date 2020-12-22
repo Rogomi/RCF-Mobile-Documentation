@@ -575,15 +575,33 @@ SignInViewController - contains functions that handles user’s authentication. 
 
 - **ApplyLeaveViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`  
+  - `didTapCloseButton(_ sender: Any)`  
+  - `didTapSubmitButton(_ sender: Any)`  
+  - `exitLeaveApplication()`  
+  - `setTextFieldsTappable(in view: UIView)`
+  - `didTapTextField(_ tap: UITapGestureRecognizer)`
 
 - **CashAdvanceListViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `updateCashAdvanceItems()`
+  - `getFilteredCashAdvances()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
 
 - **PaydayLoansListViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `updateCashAdvanceItems()`
+  - `getFilteredLoans()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
 
 - **ProfileViewController** - contains functions where the user can update their information.
   ##### Methods 
