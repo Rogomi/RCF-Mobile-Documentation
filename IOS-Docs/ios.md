@@ -731,8 +731,18 @@ SignInViewController - contains functions that handles user’s authentication. 
 
 - **HRAdminViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
-
+  - `refreshDashboard(_ sender: Any)`
+  - `refreshList(only: Bool = false)`
+  - `refreshCashAdvances(only: Bool = false)`
+  - `refreshPaydayLoans(only: Bool = false)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
+  
 - **HRCashAdvanceReviewViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
