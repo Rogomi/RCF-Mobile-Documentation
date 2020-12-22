@@ -404,6 +404,46 @@ SignInViewController - contains functions that handles user’s authentication. 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
 
+- **ApplyCashAdvanceViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyCashAdvanceReviewViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyCashAdvanceAgreementViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyCashAdvanceSignatureViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyCashAdvanceSubmitViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyPaydayLoanViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyPaydayLoanReviewViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyPaydayLoanAgreementViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  
+- **ApplyPaydayLoanSignatureViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyPaydayLoanSubmitViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
 - **ProfileViewController** - contains functions where the user can update their information.
   ##### Methods 
   - `didTapManageProfileButton(_ sender: Any)`
@@ -455,6 +495,17 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `func turnOnDigitalSignOn()`
   - `turnOffDigitalSignOn()`
 
+- **NotificationSettingsViewController** - contains functions where the user can choose to enable push notifications.  
+  ##### Methods
+  - `didTapBackBarButtonItem(_ sender: Any)`
+  - `didChangeSwitchState(_ sender: UISwitch)`
+  - `setSwitchControls()`
+  - `togglePushNotification(willOn: Bool)`
+  - `togglePaymentReminder(willOn: Bool)`
+  - `toggleInvestments(willOn: Bool)`
+  - `toggleApplicationStatus(willOn: Bool)`
+  - `updateSettings()`
+  - `getSettings()`
 
   ### DIAGRAM
 
