@@ -344,7 +344,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapSaveButton(_ sender: Any)`
   - `didTapSubmitButton(_ sender: Any)`
 
-- **ApplyLoanViewController** - 
+- **ApplyLoanViewController** - a view where the user can start applying for a loan.
   ##### Methods
   - `didTapPencilButton(_ sender: Any)`
   - `didChangeSliderValue(_ sender: Any)`
@@ -356,12 +356,12 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `refreshCalculation(_ sender: UIView? = nil)`
   - `resetCalculatorView()`
   
-- **ApplyLoanReviewViewController** - 
+- **ApplyLoanReviewViewController** - a view where the user can review the information they inputted.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapNextButton(_ sender: Any)`
   
-- **ApplyLoanStep2ViewController** - 
+- **ApplyLoanStep2ViewController** - a view where the user can upload their documents for loan application.  
   ##### Methods
   - `didTapAddDocumentButton(_ sender: Any)`
   - `didTapBackButton(_ sender: Any)`
@@ -372,7 +372,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL])`
   - `documentPickerWasCancelled(_ controller: UIDocumentPickerViewController)`
   
-- **ApplyLoanStep3StartViewController** - 
+- **ApplyLoanStep3StartViewController** - a view where the user can download and view agreements for loan application.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapDownloadButton(_ sender: Any)`
@@ -380,14 +380,14 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapNextButton(_ sender: Any)`
   - `savePDF(name: String,from url: URL)`
   
-- **ApplyLoanStep3SignatureViewController** - 
+- **ApplyLoanStep3SignatureViewController** - a view where the user can input their signature for loan application.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapRedoButton(_ sender: Any)`
   - `didTapStartSigningView(_ sender: Any)`
   - `didTapNextButton(_ sender: Any)`
 
-- **ApplyLoanStep3SubmitViewController** - 
+- **ApplyLoanStep3SubmitViewController** - a view where can download and view their signed agreements in the loan application. Has functions to submit the application.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapDownloadButton(_ sender: Any)`
@@ -395,17 +395,17 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapSubmitButton(_ sender: Any)`
   - `savePDF(name: String,from url: URL)`
   
-- **PayLoanWalletViewController** - 
+- **PayLoanWalletViewController** - contains functions to pay loans.
   ##### Methods
   - `didUpdateWalletSession(_ sender: Any)`
   - `didTapNextButton(_ sender: Any)`
   - `updateBalance()`
   
-- **LoanDetailsViewController** - 
+- **LoanDetailsViewController** - a view that contains information for the loan.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
 
-- **ApplyCashAdvanceViewController** - 
+- **ApplyCashAdvanceViewController** - a view where the user can apply for a cash advance.
   ##### Methods
   - `loadAmountCap()`
   - `didTapPencilButton(_ sender: Any)`
@@ -416,34 +416,34 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `refreshCalculation(_ sender: UIView? = nil)`
   - `resetCalculatorView()`
   
-- **ApplyCashAdvanceReviewViewController** - 
+- **ApplyCashAdvanceReviewViewController** - a view where the user can review their cash advance application information.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapNextButton(_ sender: Any)`
   - `proceedToAgreement()`
 
-- **ApplyCashAdvanceAgreementViewController** - 
+- **ApplyCashAdvanceAgreementViewController** - a view where the user can download and view the cash advance agreement.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapDownloadButton(_ sender: Any)`
   - `didTapStartSigningButton(_ sender: Any)`
   - `savePDF(from url: URL)`
 
-- **ApplyCashAdvanceSignatureViewController** - 
+- **ApplyCashAdvanceSignatureViewController** - a view where the user can input their signature for the cash advance application.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapRedoButton(_ sender: Any)`
   - `didTapStartSigningView(_ sender: Any)`
   - `didTapNextButton(_ sender: Any)`
 
-- **ApplyCashAdvanceSubmitViewController** - 
+- **ApplyCashAdvanceSubmitViewController** - a view where the user can download and view the signed cash advance agreement as well as containing functions that submit the cash advance application.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapDownloadButton(_ sender: Any)`
   - `savePDF(from url: URL)`
   - `didTapSubmitButton(_ sender: Any)`
 
-- **ApplyPaydayLoanViewController** - 
+- **ApplyPaydayLoanViewController** - a view where the user can apply for a payday loan.
   ##### Methods
   - `didTapPencilButton(_ sender: Any)`
   - `didChangeSliderValue(_ sender: UISlider)`
@@ -455,13 +455,13 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `refreshCalculation(_ sender: UIView? = nil)`
   - `resetCalculatorView()`
 
-- **ApplyPaydayLoanReviewViewController** - 
+- **ApplyPaydayLoanReviewViewController** - a view where the user can review their information for the payday loan application.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapNextButton(_ sender: Any)`
   - `proceedToAgreement()`
 
-- **ApplyPaydayLoanAgreementViewController** - 
+- **ApplyPaydayLoanAgreementViewController** - a view where the user can download and view payday loan agreements.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapDownloadPromissoryNoteButton(_ sender: Any)`
@@ -469,14 +469,14 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapStartSigningButton(_ sender: Any)`
   - `savePDF(from url: URL)`
 
-- **ApplyPaydayLoanSignatureViewController** - 
+- **ApplyPaydayLoanSignatureViewController** - a view where the user can input their signature for payday loan application.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapRedoButton(_ sender: Any)`
   - `didTapStartSigningView(_ sender: Any)`
   - `didTapNextButton(_ sender: Any)`
 
-- **ApplyPaydayLoanSubmitViewController** - 
+- **ApplyPaydayLoanSubmitViewController** - a view where the user can download and view the signed payday loan agreements, contains functions that allow the user to submit the payday loan application.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapDownloadPromissoryNoteButton(_ sender: Any)`
@@ -484,7 +484,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapSubmitButton(_ sender: Any)`
   - `savePDF(from url: URL)`
 
-- **PayrollViewController** - 
+- **PayrollViewController** - a view that contains multiple payroll functionalities.
   ##### Methods
   - `didRefreshDashboard(_ sender: Any)`
   - `updatePayrollScreen()`
@@ -509,7 +509,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
   - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
 
-- **PayslipsViewController** - 
+- **PayslipsViewController** - a view that displays the user's payslips.
   ##### Methods
   - `updatePayslips()`
   - `getFilteredPayslips()`
@@ -520,7 +520,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, heightForHeaderInSection) -> CGFloat`
   - `tableView(_, heightForFooterInSection) -> CGFloat`
   
-- **PayslipDetailsViewController** - 
+- **PayslipDetailsViewController** - a view that displays the payslip details.
   ##### Methods
   - `openAndReloadSection(index: Int, section:String)`
   - `closeAndReloadSection(index: Int, section:String)`
@@ -528,7 +528,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, numberOfRowsInSection) -> Int`
   - `tableView(_, cellForRowAt) -> UITableViewCell`
 
-- **TimesheetViewController** - 
+- **TimesheetViewController** - a view that contains the user's past timesheets.
   ##### Methods
   - `updateTimesheet()`
   - `getFilteredTimesheet()`
@@ -536,14 +536,14 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, cellForRowAt) -> UITableViewCell`
   - `tableView(_, viewForHeaderInSection) -> UIView?`
 
-- **ApplyOvertimeViewController** - 
+- **ApplyOvertimeViewController** - a view where the user can apply for an overtime, contains functions that submit the application.
   ##### Methods
   - `didTapCloseButton(_ sender: Any)`
   - `didTapSubmitButton(_ sender: Any)`
   - `setTextFieldsTappable(in view: UIView)`
   - `didTapTextField(_ tap: UITapGestureRecognizer)`
   
-- **LeavesViewController** - 
+- **LeavesViewController** - a view that displays the user's leave applications.
   ##### Methods
   - `refreshLeaveCredits(only: Bool = false)`
   - `refreshLeaves()`
@@ -558,7 +558,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, viewForHeaderInSection) -> UIView?`
   - `tableView(_, heightForHeaderInSection) -> CGFloat`
   
-- **OvertimeRequestsViewController** - 
+- **OvertimeRequestsViewController** - a view that displays the user's overtime requests.
   ##### Methods
   - `refreshRequests()`
   - `getPendingOvertimeRequests()`
@@ -573,7 +573,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, heightForHeaderInSection) -> CGFloat`
   - `tableView(_, heightForFooterInSection) -> CGFloat`
 
-- **ApplyLeaveViewController** - 
+- **ApplyLeaveViewController** - a view where the user can apply for a leave.
   ##### Methods
   - `didTapCloseButton(_ sender: Any)`  
   - `didTapSubmitButton(_ sender: Any)`  
@@ -581,7 +581,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `setTextFieldsTappable(in view: UIView)`
   - `didTapTextField(_ tap: UITapGestureRecognizer)`
 
-- **CashAdvanceListViewController** - 
+- **CashAdvanceListViewController** - a view that lists down the user's cash advance applications.
   ##### Methods
   - `updateCashAdvanceItems()`
   - `getFilteredCashAdvances()`
@@ -592,7 +592,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, heightForHeaderInSection) -> CGFloat`
   - `tableView(_, heightForFooterInSection) -> CGFloat`  
 
-- **PaydayLoansListViewController** - 
+- **PaydayLoansListViewController** - a view that list's down the user's payday loan applications.
   ##### Methods
   - `updateCashAdvanceItems()`
   - `getFilteredLoans()`
@@ -666,7 +666,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `updateSettings()`
   - `getSettings()`
 
-- **InvestmentViewController** - 
+- **InvestmentViewController** - a view that displays the user's current investments.
   ##### Methods
   - `didTapApplyForInvestment(_ sender: Any)`
   - `refreshInvestments()`
@@ -675,12 +675,12 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, cellForRowAt) -> UITableViewCell`
   - `tableView(_, didSelectRowAt) -> CGFloat`
   
-- **InactiveInvestmentViewController** - 
+- **InactiveInvestmentViewController** - a view that is displayed if the user has no activated wallet or investments.
   ##### Methods
   - `didTapApplyForInvestment(_ sender: Any)`
   - `showNotice()`
 
-- **ApplyInvestmentViewController** - 
+- **ApplyInvestmentViewController** - a view where the user can apply for an investment.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapNextButton(_ sender: Any)`
@@ -688,12 +688,12 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapTextField(_ tap: UITapGestureRecognizer)`
   - `calculateInvestment()`
 
-- **ApplyInvestmentSummaryViewController** - 
+- **ApplyInvestmentSummaryViewController** - a view that show's a summary of the information inputted by the user.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapNextButton(_ sender: Any)`
 
-- **ApplyInvestmentStep2ViewController** - 
+- **ApplyInvestmentStep2ViewController** - a view where the user can upload documents for the investment application.
   ##### Methods
   - `didTapAddDocumentButton(_ sender: Any)`
   - `didTapBackButton(_ sender: Any)`
@@ -703,7 +703,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL])`
   - `documentPickerWasCancelled(_ controller: UIDocumentPickerViewController)`
 
-- **ApplyInvestmentStep3StartViewController** - 
+- **ApplyInvestmentStep3StartViewController** - a view that displays the investment agreements, contains functions where the user can download or view the agreements.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapDownloadPromissoryNoteButton(_ sender: Any)`
@@ -711,13 +711,13 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapNextButton(_ sender: Any)`
   - `savePDF(name: String,from url: URL)`
 
-- **ApplyInvestmentStep3SignatureViewController** - 
+- **ApplyInvestmentStep3SignatureViewController** - a view where the user can input their signature for an investment application.
   - `didTapBackButton(_ sender: Any)`
   - `didTapRedoButton(_ sender: Any)`
   - `didTapStartSigningView(_ sender: Any)`
   - `didTapNextButton(_ sender: Any)`
 
-- **ApplyInvestmentStep3SubmitViewController** - 
+- **ApplyInvestmentStep3SubmitViewController** - a view where the user can download and view the signed invesment agreement,contains functions that submit the investment application.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapDownloadPromissoryNoteButton(_ sender: Any)`
@@ -725,11 +725,11 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapSubmitButton(_ sender: Any)`
   - `savePDF(name: String,from url: URL)`
   
-- **InvestmentDetailsViewController** - 
+- **InvestmentDetailsViewController** - a view that displays the user's investment details.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
 
-- **HRAdminViewController** - 
+- **HRAdminViewController** - a view that displays both cash advance and payday loans.
   ##### Methods
   - `refreshDashboard(_ sender: Any)`
   - `refreshList(only: Bool = false)`
@@ -743,7 +743,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, heightForHeaderInSection) -> CGFloat`
   - `tableView(_, heightForFooterInSection) -> CGFloat`  
   
-- **HRCashAdvanceReviewViewController** - 
+- **HRCashAdvanceReviewViewController** - a view that displays a selected cash advance's information, contains functions that can approve/decline an application.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapDeclineButton(_ sender: Any)`
@@ -751,7 +751,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `reloadLabels()`
   - `updateCashAdvance(with status: CashAdvanceStatus)`
 
-- **HRPaydayLoanReviewViewController** - 
+- **HRPaydayLoanReviewViewController** - a view that displays a selected payday loan's information, contains functions that can approve/decline an application.
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   - `didTapDeclineButton(_ sender: Any)`
@@ -759,7 +759,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `reloadLabels()`
   - `updateCashAdvance(with status: CashAdvanceStatus)`
 
-- **HRPaydayLoansListingViewController** - 
+- **HRPaydayLoansListingViewController** - a view that displays the list of payday loans for multiple users.
   ##### Methods
   - `didTapCloseBarButtonItem(_ sender: Any)`
   - `refreshList(_ sender: Any)`
@@ -769,7 +769,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, viewForHeaderInSection) -> UIView?`
   - `tableView(_, heightForHeaderInSection) -> CGFloat`
 
-- **HRTimesheetDashboardViewController** - 
+- **HRTimesheetDashboardViewController** - a view that displays the employee timesheets for the current day.
   ##### Methods
   - `refreshList(only: Bool = false)`
   - `refreshTimesheet(only: Bool = false)`
@@ -781,7 +781,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, heightForHeaderInSection) -> CGFloat`
   - `tableView(_, heightForFooterInSection) -> CGFloat`  
   
-- **HRTimesheetSearchViewController** - 
+- **HRTimesheetSearchViewController** - a view that allows the user to search employees past payslips.
   ##### Methods
   - `updateTimesheet()` 
   - `getFilteredTimelogs()` 
@@ -791,26 +791,26 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, cellForRowAt) -> UITableViewCell`
   - `tableView(_, viewForHeaderInSection) -> UIView?`
   
-- **HREmployeeTimesheetViewController** - 
+- **HREmployeeTimesheetViewController** - a view that displays an employee's past timesheets.
   ##### Methods
   - `tableView(_, numberOfRowsInSection) -> Int`
   - `tableView(_, cellForRowAt) -> UITableViewCell`
   - `tableView(_, viewForHeaderInSection) -> UIView?`
   
-- **HRTimelogDetailsViewController** - 
+- **HRTimelogDetailsViewController** - a view that displays information about a selected employee timesheet.
   ##### Methods
   - `didTapWholeView(_ sender: Any)`
   - `didTapCloseButton(_ sender: Any)`
   - `reloadLabels()`
   - `didTapBackButton(_ sender: Any)`
   
-- **HREmployeeTimsheetFilterViewController** - 
+- **HREmployeeTimsheetFilterViewController** - a view that displays all of the selected user's timesheets, contains functions to filter the date.
   ##### Methods
   - `didTapWholeView(_ sender: Any)`
   - `didTapCancelButton(_ sender: Any)`
   - `didTapSearchButton(_ sender: Any)`
   
-- **HRLeavesDashboardViewController** - 
+- **HRLeavesDashboardViewController** - a view that displays the most recent employee leave applications.
   ##### Methods
   - `refreshList(only: Bool = false)`
   - `refreshLeaves(only: Bool = false)`
@@ -822,7 +822,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, heightForHeaderInSection) -> CGFloat`
   - `tableView(_, heightForFooterInSection) -> CGFloat`  
   
-- **HRLeavesFilterViewController** - 
+- **HRLeavesFilterViewController** - a view where the user can search for employees with leaves.
   ##### Methods
   - `updateLeaves()`
   - `getFilteredLeaves()`
@@ -833,7 +833,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, heightForHeaderInSection) -> CGFloat`
   - `tableView(_, heightForFooterInSection) -> CGFloat`  
 
-- **HRLeaveReviewViewController** - 
+- **HRLeaveReviewViewController** - a view that displays a user's leave application, contains functions that can approve/decline an applications.
   ##### Methods
   - `didTapWholeView(_ sender: Any)`
   - `didTapDeclineButton(_ sender: Any)`
@@ -841,7 +841,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `reloadLabels()`
   - `updateLeaves(approved: Bool)`
 
-- **HROvertimeDashboardViewController** - 
+- **HROvertimeDashboardViewController** - a view that displays the most recent overtime requests.
   ##### Methods
   - `refreshList(only: Bool = false)`
   - `refreshOvertimes()`
@@ -853,7 +853,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, heightForHeaderInSection) -> CGFloat`
   - `tableView(_, heightForFooterInSection) -> CGFloat`  
 
-- **HROvertimeListViewController** - 
+- **HROvertimeListViewController** - a view where the user can search for the past overtime requests of a suer.
   ##### Methods
   - `updateOvertimes()`
   - `getFilteredOvertimes()`
@@ -909,7 +909,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, numberOfRowsInSection) -> Int`
   - `tableView(_, cellForRowAt) -> UITableViewCell`
 
-- **HRAdminEmployeesViewController** - 
+- **HRAdminEmployeesViewController** - a view that displays all the employees with a search box.
   ##### Methods
   - `refreshList()`
   - `tableView(_, numberOfRowsInSection) -> Int`
@@ -917,7 +917,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, viewForHeaderInSection) -> UIView?`
   - `tableView(_, heightForHeaderInSection) -> CGFloat`
   
-- **HRCashAdvanceListViewController** - 
+- **HRCashAdvanceListViewController** - a view that displays more cash advances in a list, is used by both active list and application list.
   ##### Methods
   - `didTapCloseBarButtonItem(_ sender: Any)`
   - `refreshList(_ sender: Any)`
