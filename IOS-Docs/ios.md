@@ -874,27 +874,57 @@ SignInViewController - contains functions that handles user’s authentication. 
 
 - **HRPayslipDashboardViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `refreshList(only: Bool = false)`
+  - `refreshPayslips(only: Bool = false)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat` 
 
 - **HRPayslipListViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
-
+  - `refreshPayslips()` 
+  - `getFilteredPayslips()` 
+  - `refreshData()` 
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  
 - **HRPayslipDetailsViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `openAndReloadSection(index: Int, section:String)`
+  - `closeAndReloadSection(index: Int, section:String)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
 
 - **HRPastPayslipsListViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `refreshPayslips(id: String)`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
 
 - **HRAdminEmployeesViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
-
+  - `refreshList()`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  
 - **HRCashAdvanceListViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `didTapCloseBarButtonItem(_ sender: Any)`
+  - `refreshList(_ sender: Any)`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
 
   ### DIAGRAM
 
