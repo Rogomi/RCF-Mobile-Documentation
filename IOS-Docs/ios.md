@@ -372,14 +372,37 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `documentPickerWasCancelled(_ controller: UIDocumentPickerViewController)`
   
 - **ApplyLoanStep3StartViewController** - 
-
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapDownloadButton(_ sender: Any)`
+  - `didTapAmortizationButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `savePDF(name: String,from url: URL)`
+  
 - **ApplyLoanStep3SignatureViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapRedoButton(_ sender: Any)`
+  - `didTapStartSigningView(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
 
 - **ApplyLoanStep3SubmitViewController** - 
-
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapDownloadButton(_ sender: Any)`
+  - `didTapAmortizationButton(_ sender: Any)`
+  - `didTapSubmitButton(_ sender: Any)`
+  - `savePDF(name: String,from url: URL)`
+  
 - **PayLoanWalletViewController** - 
-
+  ##### Methods
+  - `didUpdateWalletSession(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `updateBalance()`
+  
 - **LoanDetailsViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
 
 - **ProfileViewController** - contains functions where the user can update their information.
   ##### Methods 
