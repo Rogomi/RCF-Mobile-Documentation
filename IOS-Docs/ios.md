@@ -853,7 +853,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, heightForHeaderInSection) -> CGFloat`
   - `tableView(_, heightForFooterInSection) -> CGFloat`  
 
-- **HROvertimeListViewController** - a view where the user can search for the past overtime requests of a suer.
+- **HROvertimeListViewController** - a view where the user can search for the past overtime requests of a user.
   ##### Methods
   - `updateOvertimes()`
   - `getFilteredOvertimes()`
@@ -864,7 +864,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, heightForHeaderInSection) -> CGFloat`
   - `tableView(_, heightForFooterInSection) -> CGFloat`  
 
-- **HROvertimeReviewViewController** - 
+- **HROvertimeReviewViewController** - a view where the user can view details of an overtime request, contains functions that can approve/decline a request.
   ##### Methods
   - `didTapWholeView(_ sender: Any)`
   - `didTapDeclineButton(_ sender: Any)`
@@ -872,7 +872,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `reloadLabels()`
   - `updateOvertime(approved: Bool)`
 
-- **HRPayslipDashboardViewController** - 
+- **HRPayslipDashboardViewController** - a view where the employee payslips are displayed.
   ##### Methods
   - `refreshList(only: Bool = false)`
   - `refreshPayslips(only: Bool = false)`
@@ -884,7 +884,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, heightForHeaderInSection) -> CGFloat`
   - `tableView(_, heightForFooterInSection) -> CGFloat` 
 
-- **HRPayslipListViewController** - 
+- **HRPayslipListViewController** - a view where the user can search for employees with past payslips.
   ##### Methods
   - `refreshPayslips()` 
   - `getFilteredPayslips()` 
@@ -895,7 +895,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, viewForHeaderInSection) -> UIView?`
   - `tableView(_, heightForHeaderInSection) -> CGFloat`
   
-- **HRPayslipDetailsViewController** - 
+- **HRPayslipDetailsViewController** - a view that displays a selected payslip's details.
   ##### Methods
   - `openAndReloadSection(index: Int, section:String)`
   - `closeAndReloadSection(index: Int, section:String)`
@@ -903,7 +903,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `tableView(_, numberOfRowsInSection) -> Int`
   - `tableView(_, cellForRowAt) -> UITableViewCell`
 
-- **HRPastPayslipsListViewController** - 
+- **HRPastPayslipsListViewController** - a view that lists downs all of the selected user's past payslips.
   ##### Methods
   - `refreshPayslips(id: String)`
   - `tableView(_, numberOfRowsInSection) -> Int`
