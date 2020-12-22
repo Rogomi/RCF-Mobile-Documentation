@@ -72,7 +72,7 @@ QRCodeReader.swift - used to scan QR codes from other user when sending funds
 **MBProgressHUD** - used to indicate that the items are loading and prevent user interaction until the items are loaded.  
 **IQKeyboardManager** - used to implement Keyboard avoiding when entering data into text-fields that are covered by the iOS On-screen Keyboard.  
 **SDWebImage** - used to set images on UIImageViews using URLs.  
-
+**SDWebImagePDFCoder** - used to set PDF images on UIImageViews using URLs. 
 
 #### ACTIVITIES AND CONTROLLERS
 **Core Classes**    
@@ -342,6 +342,11 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapTNCLabel(_ sender: Any)`
   - `didTapSaveButton(_ sender: Any)`
   - `didTapSubmitButton(_ sender: Any)`
+
+- **ApplyLoanViewController** - 
+
+
+
 - **ProfileViewController** - contains functions where the user can update their information.
   ##### Methods 
   - `didTapManageProfileButton(_ sender: Any)`
