@@ -345,7 +345,19 @@ SignInViewController - contains functions that handles user’s authentication. 
 
 - **ApplyLoanViewController** - 
 
+- **ApplyLoanReviewViewController** - 
 
+- **ApplyLoanStep2ViewController** - 
+
+- **ApplyLoanStep3StartViewController** - 
+
+- **ApplyLoanStep3SignatureViewController** - 
+
+- **ApplyLoanStep3SubmitViewController** - 
+
+- **PayLoanWalletViewController** - 
+
+- **LoanDetailsViewController** - 
 
 - **ProfileViewController** - contains functions where the user can update their information.
   ##### Methods 
