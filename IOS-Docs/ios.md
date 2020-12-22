@@ -485,19 +485,55 @@ SignInViewController - contains functions that handles user’s authentication. 
 
 - **PayrollViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `didRefreshDashboard(_ sender: Any)`
+  - `updatePayrollScreen()`
+  - `updatePayslip(only: Bool = false)`
+  - `updateTimesheet(only: Bool = false)`
+  - `updatePendingOvertime(only: Bool = false)`
+  - `updateCashAdvances(only: Bool = false)`
+  - `updatePaydayLoans(only: Bool = false)`
+  - `updateLeaves()`
+  - `clockIn()`
+  - `clockOut()`
+  - `cancelOvertime(tranNo: Int)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, heightForRowAt) -> CGFloat`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+  - `tableView(_, estimatedHeightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
 
 - **PayslipsViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `updatePayslips()`
+  - `getFilteredPayslips()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`
   
 - **PayslipDetailsViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `openAndReloadSection(index: Int, section:String)`
+  - `closeAndReloadSection(index: Int, section:String)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
 
 - **TimesheetViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `updateTimesheet()`
+  - `getFilteredTimesheet()`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
 
 - **ApplyOvertimeViewController** - 
   ##### Methods
