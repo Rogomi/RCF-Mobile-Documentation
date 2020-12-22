@@ -214,6 +214,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `selectCategoryFilter(_ category: CategoryFilter)`
   - `tableView(_, numberOfRowsInSection) -> Int`
   - `tableView(_, cellForRowAt) -> UITableViewCell`
+  
 - **TransactionDetailsViewController** - a view controller where the user can see the details of the transaction they selected from the transactions list. It is also reused on specific transactions in the Wallet dashboard.  
   ##### Methods
   - `numberOfSections(in tableView: UITableView)`
@@ -537,16 +538,41 @@ SignInViewController - contains functions that handles user’s authentication. 
 
 - **ApplyOvertimeViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `didTapCloseButton(_ sender: Any)`
+  - `didTapSubmitButton(_ sender: Any)`
+  - `setTextFieldsTappable(in view: UIView)`
+  - `didTapTextField(_ tap: UITapGestureRecognizer)`
   
 - **LeavesViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
-
+  - `refreshLeaveCredits(only: Bool = false)`
+  - `refreshLeaves()`
+  - `getApprovedLeaves()`
+  - `getPendingLeaves()`
+  - `getDeclinedLeaves()`
+  - `getFilteredLeaves()`
+  - `cancelLeave(tranNo: Int)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  
 - **OvertimeRequestsViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
-  
+  - `refreshRequests()`
+  - `getPendingOvertimeRequests()`
+  - `getApprovedOvertimeRequests()`
+  - `getDeclinedOvertimeRequests()`
+  - `getFilteredRequests()`
+  - `cancelOvertime()`  
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`
+
 - **ApplyLeaveViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`  
@@ -741,19 +767,6 @@ SignInViewController - contains functions that handles user’s authentication. 
 - **HRCashAdvanceListViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
-
-- **InvestmentDetailsViewController** - 
-  ##### Methods
-  - `didTapBackButton(_ sender: Any)`
-
-- **InvestmentDetailsViewController** - 
-  ##### Methods
-  - `didTapBackButton(_ sender: Any)`
-
-- **InvestmentDetailsViewController** - 
-  ##### Methods
-  - `didTapBackButton(_ sender: Any)`
-
 
   ### DIAGRAM
 
