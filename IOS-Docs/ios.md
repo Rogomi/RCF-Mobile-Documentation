@@ -531,6 +531,42 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `updateSettings()`
   - `getSettings()`
 
+- **InvestmentViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  
+- **InactiveInvestmentViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyInvestmentViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyInvestmentSummaryViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyInvestmentStep2ViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyInvestmentStep3StartViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyInvestmentStep3SignatureViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyInvestmentStep3SubmitViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **InvestmentDetailsViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
   ### DIAGRAM
 
   ![Application Architecture](diagram.png 'Application Architecture')
