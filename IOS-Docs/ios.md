@@ -428,19 +428,43 @@ SignInViewController - contains functions that handles user’s authentication. 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
 
-- **ApplyPaydayLoanReviewViewController** - 
+- **PayrollViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
 
-- **ApplyPaydayLoanAgreementViewController** - 
+- **PayslipsViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
   
-- **ApplyPaydayLoanSignatureViewController** - 
+- **PayslipDetailsViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
 
-- **ApplyPaydayLoanSubmitViewController** - 
+- **TimesheetViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyOvertimeViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  
+- **LeavesViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **OvertimeRequestsViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  
+- **ApplyLeaveViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`  
+
+- **CashAdvanceListViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **PaydayLoansListViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
 
