@@ -783,43 +783,94 @@ SignInViewController - contains functions that handles user’s authentication. 
   
 - **HRTimesheetSearchViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)` 
+  - `updateTimesheet()` 
+  - `getFilteredTimelogs()` 
+  - `refreshGroups()` 
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
   
 - **HREmployeeTimesheetViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
   
 - **HRTimelogDetailsViewController** - 
   ##### Methods
+  - `didTapWholeView(_ sender: Any)`
+  - `didTapCloseButton(_ sender: Any)`
+  - `reloadLabels()`
   - `didTapBackButton(_ sender: Any)`
   
 - **HREmployeeTimsheetFilterViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `didTapWholeView(_ sender: Any)`
+  - `didTapCancelButton(_ sender: Any)`
+  - `didTapSearchButton(_ sender: Any)`
   
 - **HRLeavesDashboardViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `refreshList(only: Bool = false)`
+  - `refreshLeaves(only: Bool = false)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
   
 - **HRLeavesFilterViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `updateLeaves()`
+  - `getFilteredLeaves()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
 
 - **HRLeaveReviewViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `didTapWholeView(_ sender: Any)`
+  - `didTapDeclineButton(_ sender: Any)`
+  - `didTapApproveButton(_ sender: Any)`
+  - `reloadLabels()`
+  - `updateLeaves(approved: Bool)`
 
 - **HROvertimeDashboardViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `refreshList(only: Bool = false)`
+  - `refreshOvertimes()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
 
 - **HROvertimeListViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `updateOvertimes()`
+  - `getFilteredOvertimes()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
 
 - **HROvertimeReviewViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `didTapWholeView(_ sender: Any)`
+  - `didTapDeclineButton(_ sender: Any)`
+  - `didTapApproveButton(_ sender: Any)`
+  - `reloadLabels()`
+  - `updateOvertime(approved: Bool)`
 
 - **HRPayslipDashboardViewController** - 
   ##### Methods
