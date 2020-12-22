@@ -344,11 +344,33 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapSubmitButton(_ sender: Any)`
 
 - **ApplyLoanViewController** - 
-
+  ##### Methods
+  - `didTapPencilButton(_ sender: Any)`
+  - `didChangeSliderValue(_ sender: Any)`
+  - `didTapSubmitButton(_ sender: Any)`
+  - `setTextFieldsTappable(in view: UIView)`
+  - `didTapTextField(_ tap: UITapGestureRecognizer)`
+  - `updateCurrentAmount(_ amount: Float, sender: UIView)`
+  - `refreshTimer(_ sender: UIView? = nil)`
+  - `refreshCalculation(_ sender: UIView? = nil)`
+  - `resetCalculatorView()`
+  
 - **ApplyLoanReviewViewController** - 
-
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  
 - **ApplyLoanStep2ViewController** - 
-
+  ##### Methods
+  - `didTapAddDocumentButton(_ sender: Any)`
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapSaveButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `refreshFields()`
+  - `addDocumentFormView(hidesRemoveButton: Bool = false) -> DocumentFormView?`
+  - `documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL])`
+  - `documentPickerWasCancelled(_ controller: UIDocumentPickerViewController)`
+  
 - **ApplyLoanStep3StartViewController** - 
 
 - **ApplyLoanStep3SignatureViewController** - 
