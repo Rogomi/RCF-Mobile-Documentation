@@ -746,18 +746,40 @@ SignInViewController - contains functions that handles user’s authentication. 
 - **HRCashAdvanceReviewViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
+  - `didTapDeclineButton(_ sender: Any)`
+  - `didTapApproveButton(_ sender: Any)`
+  - `reloadLabels()`
+  - `updateCashAdvance(with status: CashAdvanceStatus)`
 
 - **HRPaydayLoanReviewViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
+  - `didTapDeclineButton(_ sender: Any)`
+  - `didTapApproveButton(_ sender: Any)`
+  - `reloadLabels()`
+  - `updateCashAdvance(with status: CashAdvanceStatus)`
 
 - **HRPaydayLoansListingViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `didTapCloseBarButtonItem(_ sender: Any)`
+  - `refreshList(_ sender: Any)`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `setupPaydayLoanCell()`  
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
 
 - **HRTimesheetDashboardViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
+  - `refreshList(only: Bool = false)`
+  - `refreshTimesheet(only: Bool = false)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
   
 - **HRTimesheetSearchViewController** - 
   ##### Methods
