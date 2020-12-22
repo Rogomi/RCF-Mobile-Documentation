@@ -567,6 +567,103 @@ SignInViewController - contains functions that handles user’s authentication. 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
 
+- **HRAdminViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **HRCashAdvanceReviewViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **HRPaydayLoanReviewViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **HRPaydayLoansListingViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **HRTimesheetDashboardViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  
+- **HRTimesheetSearchViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)` 
+  
+- **HREmployeeTimesheetViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  
+- **HRTimelogDetailsViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  
+- **HREmployeeTimsheetFilterViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  
+- **HRLeavesDashboardViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  
+- **HRLeavesFilterViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **HRLeaveReviewViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **HROvertimeDashboardViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **HROvertimeListViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **HROvertimeReviewViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **HRPayslipDashboardViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **HRPayslipListViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **HRPayslipDetailsViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **HRPastPayslipsListViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **HRAdminEmployeesViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **HRCashAdvanceListViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **InvestmentDetailsViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **InvestmentDetailsViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **InvestmentDetailsViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+
   ### DIAGRAM
 
   ![Application Architecture](diagram.png 'Application Architecture')
