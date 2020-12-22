@@ -243,7 +243,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `searchBarSearchButtonClicked(_ searchBar: UISearchBar)`
   - `didTapAddNewContactButton(_ sender: Any)`
 
-- **AddContactViewController** - a view where the user can input another user’s information so they can add them as contact.  
+- **AddContactViewController** - a view where the user can input another user’s information so they can add them as contact. 
   ##### Methods
   - `didTapNextButton(_ sender: Any)`
 
@@ -252,7 +252,6 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `checkScanPermissions()`
 
 - **CWStep1ViewController** - a view where the user can start their wallet activation. It contains fields that mostly hold the user’s personal information for wallet activation.  
-
   ##### Methods
   - `didTapNextButton(_ sender: Any)`
   - `refreshFields()`
@@ -275,6 +274,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapNextButton(_ sender: Any)`
   - `refreshFields()`
   - `textFieldShouldBeginEditing(_ textField: UITextField)`
+  
 - **CWStep5ViewController** - a view where the user can upload their documents for wallet activation.  
   ##### Methods
   - `didTapSubmitButton(_ sender: Any)`
@@ -406,15 +406,27 @@ SignInViewController - contains functions that handles user’s authentication. 
 
 - **ApplyCashAdvanceViewController** - 
   ##### Methods
-  - `didTapBackButton(_ sender: Any)`
-
+  - `loadAmountCap()`
+  - `didTapPencilButton(_ sender: Any)`
+  - `didChangeSliderValue(_ sender: UISlider)`
+  - `didTapSubmitButton(_ sender: Any)`
+  - `updateCurrentAmount(_ amount: Float, sender: UIView)`
+  - `refreshTimer(_ sender: UIView? = nil)`
+  - `refreshCalculation(_ sender: UIView? = nil)`
+  - `resetCalculatorView()`
+  
 - **ApplyCashAdvanceReviewViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `proceedToAgreement()`
 
 - **ApplyCashAdvanceAgreementViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
+  - `didTapDownloadButton(_ sender: Any)`
+  - `didTapStartSigningButton(_ sender: Any)`
+  - `savePDF(from url: URL)`
 
 - **ApplyCashAdvanceSignatureViewController** - 
   ##### Methods
@@ -425,6 +437,22 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapBackButton(_ sender: Any)`
 
 - **ApplyPaydayLoanViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyPaydayLoanReviewViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyPaydayLoanAgreementViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyPaydayLoanSignatureViewController** - 
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyPaydayLoanSubmitViewController** - 
   ##### Methods
   - `didTapBackButton(_ sender: Any)`
 
