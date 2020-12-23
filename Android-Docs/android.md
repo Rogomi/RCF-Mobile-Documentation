@@ -83,6 +83,31 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   ##### Methods
   - `initProfile() ` - populate all information in profile page
   - `shareApp() ` - trigger when sharing the app
+- **ManageProfileFragment** - handles user profile details
+  #### Methods
+  - `initFields() ` - populate all input field
+  - `onUpdateProfile(clientDetailsData: ClientDetailsData) ` - called when successfully updated profile details
+- **NotificationFragment** - handles push notifications
+- **SecurityFragment** - handles user password and security PIN menu
+- **ChangePasswordPINFragment** - handles changing of user password and security PIN
+  #### Methods
+  - `initPasswordField() ` - initializes password details
+  - `initPINField() ` - initialize PIN details
+  - `onChangePassword(title: String, message: String) ` - called when successfully changed user password
+  - `onChangePIN(title: String, message: String) ` - called when successfully changes security PIN
+- **SupportFragment** - handles support menu
+- **AboutUsFragment** - handles about us details
+- **AMLPolicyFragment** - handles AML policy details
+  #### Methods
+  - `initPolicy() ` - loads AML url link into html to webview
+- **ContactUsFragment** - handles contact us details
+- **MainFAQsFragment** - handles menu for Main FAQs list
+  #### Methods
+  - `searchFaqs()` - searches faqs from user search input
+- **FAQsListFragment** - handles display of Main FAQs details and sub-FAQs
+  #### Methods
+  - `initFAQS()` - gets FAQs details based on selected Main FAQ
+  - `initFields()` - initialized FAQs details
 - **WalletFragment** - handles the wallet page
   ##### Methods
   - `loginWallet() ` - trigger when login to wallet
@@ -91,6 +116,32 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `onLock() ` - lock the wallet page
   - `showTransactions() ` - call the list of transactions to the server
   - `onRenderTransactions(transactions: List<Transaction>) ` - display the list of transaction from the server
+- **TransactionDetailsFragment** - handles transaction details based on transaction type
+  #### Methods
+  - `initTransactionDetails() ` - initializes display of transaction details based on transaction type
+- **TransactionCompletedFragment** - handles completed transaction details based on transaction type
+  #### Methods
+  - `initFields() ` - initializes details of completed transaction based on transaction type
+- **WalletAddressFragment** - handles  user wallet address details
+- **WalletContactFragment** - handles user wallet contact  details
+- **WalletEmploymentFragment** - handles user wallet employment details
+- **WalletPersonalInfoFragment** - handles user wallet information details
+  #### Methods
+  - `initFields() ` - initializes user wallet information details
+- **WalletDocumentFragment** - handles user wallet document details
+  ### Methods
+  - `addDocumentField() ` - allows user to provide additional document
+  - `save() ` - save wallet document/s provided by user
+- **FundsFragment** - handles start of transaction based on selected funds transaction type
+- **SendFundFragment** - handles the send fund page
+  ##### Methods
+  - `addField() ` - trigger when adding multiple recipients
+- **AddFundsFragment** - handles the add fund page
+  ##### Methods
+  - `openUrl(url: String) ` - load the webview of adding fund
+- **ReviewTransactionFragment** - handles review of user provided user details based on transaction type
+- **TransactionsFragment** - handles display of list of transactions
+- **MyCodeFragment** - handles user QR Code
 - **LoanDashboardFragment** - handles the dashboard
   ##### Methods
   - `showTransactions() ` - show all transactions
@@ -112,11 +163,16 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `initCashAdvance() ` - initialize the list of cash advances
   - `onRenderCashAdvances(cashAdvanceList: List<CashAdvance>) ` - display the list of cash advances
   - `onSelectedCashAdvance(cashAdvance: CashAdvance) ` - show the details of cash advance
-- **CashAdvanceDetailsHrisFragment** - - handles the display of cash advance detail(HR Admin)
+- **CashAdvanceDetailsHrisFragment** - handles the display of cash advance details(HR Admin)
   ##### Methods
   - `initCashAdvances() ` - display the details of cash advance
   - `approveCashAdvance(id: Int) ` - server call to approve the cash advance
   - `declineCashAdvance(id: Int) ` - server call to decline the cash advance
+- **PaydayDetailsHrisFragment** - handles the display of payday loan details(HR Admin)
+  #### Methods
+  - `initPaydayLoans() ` -display the details of payday loans
+  - `approvePaydayLoan(id: Int) ` - server call to approve the payday loan
+  - `declinePaydayLoan(id: Int) ` - server call to decline the payday loan
 - **EmployeeHrisDashboardFragment** - handles the display of employees in the dashboard (HR Admin)
   ##### Methods
   - `onRenderEmployees(employees: List<Employee>) ` - show the list of employees
@@ -159,6 +215,12 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `initPayslips() ` - initialize adpater and recyclerview
   - `onRenderPayslips(payslips: List<Payslip>) ` - display the list of payslips
   - `onSelectedPayslip(payslips: Payslip) ` - to show payslip details
+- **PayslipHrisFragment** - handles payslip dashboard
+- **PayslipHrisPerEmployeeFragment** - display all payslip based on employee
+  #### Methods
+  - `initPayslips() ` - initialize payslip details
+  - `onRenderPayslips(playslips: List<Payslip>) ` - displays list of employee payslips
+  - `onSelectedPayslip(playslips: Payslip) ` - display selected payslip details
 - **TimesheetDetailsHrisFragment** - handles the display of timelog details
   ##### Methods
   - `initTimelogs() ` - populate the details of timesheet
@@ -167,6 +229,13 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `onSearch(keyword: String) ` - filter the list of timelogs
   - `onRenderTimesheets(timesheets: List<TimeLog>) ` - render the list of timesheets
   - `onSelectedTimesheet(timesheet: TimeLog) ` - to display the list of selected timesheet
+- **TimesheetHrisDashbaordFragment** - handles Timesheet dashboard (HR Admin)
+- **TimesheetHrisPerEmployeeFragment** - display all timelogs based on employee (HR Admin)
+  #### Methods
+  - `initTimesheets() ` - initialize timelog details
+  - `filterTimesheet(from: String, to: String) ` - filter timelogs based on date
+  - `onRenderTimesheets(timesheets: List<Timelog>) ` - display list of employee timelogs
+  - `onSelectedTimeTimesheet(timelog: Timelog) ` - display selected timelog details
 - **BankListFragment** - handles the display of bank list
   ##### Methods
   - `initBanks() ` - initialize adapter and recyclerview
@@ -191,15 +260,6 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `initRecipients() ` - initialize the adapter and recyclerview
   - `onRenderWalletContacts(walletContacts: List<WalletContact>) ` - list all wallet contacts
   - `onSelectedRecipient(walletContact: WalletContact) ` - trigger when selecting a contact
-- **SendFundFragment** - handles the send fund page
-
-  ##### Methods
-
-  - `addField() ` - trigger when adding multiple recipients
-
-- **AddFundsFragment** - handles the add fund page
-  ##### Methods
-  - `openUrl(url: String) ` - load the webview of adding fund
 - **InvestmentsFragment** - handles the investments page
   ##### Methods
   - `checkWallet() ` - check if wallet is active
@@ -226,9 +286,7 @@ Most of the third-party libraries are integrated using Gradle. They can be added
   - `takePhotoFromCamera() ` - open camera
   - `saveImage(myBitmap: Bitmap): File? ` - save image to memory
 - **LoanDocumentFragment** - handles the list of documents to be uploaded
-
   ##### Methods
-
   - `save() ` - save the documents to sever
   - `addDocumentField() ` - handles the dynamic adding of document fragments
 
