@@ -72,7 +72,7 @@ QRCodeReader.swift - used to scan QR codes from other user when sending funds
 **MBProgressHUD** - used to indicate that the items are loading and prevent user interaction until the items are loaded.  
 **IQKeyboardManager** - used to implement Keyboard avoiding when entering data into text-fields that are covered by the iOS On-screen Keyboard.  
 **SDWebImage** - used to set images on UIImageViews using URLs.  
-
+**SDWebImagePDFCoder** - used to set PDF images on UIImageViews using URLs. 
 
 #### ACTIVITIES AND CONTROLLERS
 **Core Classes**    
@@ -214,6 +214,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `selectCategoryFilter(_ category: CategoryFilter)`
   - `tableView(_, numberOfRowsInSection) -> Int`
   - `tableView(_, cellForRowAt) -> UITableViewCell`
+  
 - **TransactionDetailsViewController** - a view controller where the user can see the details of the transaction they selected from the transactions list. It is also reused on specific transactions in the Wallet dashboard.  
   ##### Methods
   - `numberOfSections(in tableView: UITableView)`
@@ -243,7 +244,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `searchBarSearchButtonClicked(_ searchBar: UISearchBar)`
   - `didTapAddNewContactButton(_ sender: Any)`
 
-- **AddContactViewController** - a view where the user can input another user’s information so they can add them as contact.  
+- **AddContactViewController** - a view where the user can input another user’s information so they can add them as contact. 
   ##### Methods
   - `didTapNextButton(_ sender: Any)`
 
@@ -252,7 +253,6 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `checkScanPermissions()`
 
 - **CWStep1ViewController** - a view where the user can start their wallet activation. It contains fields that mostly hold the user’s personal information for wallet activation.  
-
   ##### Methods
   - `didTapNextButton(_ sender: Any)`
   - `refreshFields()`
@@ -275,6 +275,7 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapNextButton(_ sender: Any)`
   - `refreshFields()`
   - `textFieldShouldBeginEditing(_ textField: UITextField)`
+  
 - **CWStep5ViewController** - a view where the user can upload their documents for wallet activation.  
   ##### Methods
   - `didTapSubmitButton(_ sender: Any)`
@@ -342,6 +343,266 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `didTapTNCLabel(_ sender: Any)`
   - `didTapSaveButton(_ sender: Any)`
   - `didTapSubmitButton(_ sender: Any)`
+
+- **ApplyLoanViewController** - a view where the user can start applying for a loan.
+  ##### Methods
+  - `didTapPencilButton(_ sender: Any)`
+  - `didChangeSliderValue(_ sender: Any)`
+  - `didTapSubmitButton(_ sender: Any)`
+  - `setTextFieldsTappable(in view: UIView)`
+  - `didTapTextField(_ tap: UITapGestureRecognizer)`
+  - `updateCurrentAmount(_ amount: Float, sender: UIView)`
+  - `refreshTimer(_ sender: UIView? = nil)`
+  - `refreshCalculation(_ sender: UIView? = nil)`
+  - `resetCalculatorView()`
+  
+- **ApplyLoanReviewViewController** - a view where the user can review the information they inputted.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  
+- **ApplyLoanStep2ViewController** - a view where the user can upload their documents for loan application.  
+  ##### Methods
+  - `didTapAddDocumentButton(_ sender: Any)`
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapSaveButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `refreshFields()`
+  - `addDocumentFormView(hidesRemoveButton: Bool = false) -> DocumentFormView?`
+  - `documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL])`
+  - `documentPickerWasCancelled(_ controller: UIDocumentPickerViewController)`
+  
+- **ApplyLoanStep3StartViewController** - a view where the user can download and view agreements for loan application.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapDownloadButton(_ sender: Any)`
+  - `didTapAmortizationButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `savePDF(name: String,from url: URL)`
+  
+- **ApplyLoanStep3SignatureViewController** - a view where the user can input their signature for loan application.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapRedoButton(_ sender: Any)`
+  - `didTapStartSigningView(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+
+- **ApplyLoanStep3SubmitViewController** - a view where can download and view their signed agreements in the loan application. Has functions to submit the application.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapDownloadButton(_ sender: Any)`
+  - `didTapAmortizationButton(_ sender: Any)`
+  - `didTapSubmitButton(_ sender: Any)`
+  - `savePDF(name: String,from url: URL)`
+  
+- **PayLoanWalletViewController** - contains functions to pay loans.
+  ##### Methods
+  - `didUpdateWalletSession(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `updateBalance()`
+  
+- **LoanDetailsViewController** - a view that contains information for the loan.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **ApplyCashAdvanceViewController** - a view where the user can apply for a cash advance.
+  ##### Methods
+  - `loadAmountCap()`
+  - `didTapPencilButton(_ sender: Any)`
+  - `didChangeSliderValue(_ sender: UISlider)`
+  - `didTapSubmitButton(_ sender: Any)`
+  - `updateCurrentAmount(_ amount: Float, sender: UIView)`
+  - `refreshTimer(_ sender: UIView? = nil)`
+  - `refreshCalculation(_ sender: UIView? = nil)`
+  - `resetCalculatorView()`
+  
+- **ApplyCashAdvanceReviewViewController** - a view where the user can review their cash advance application information.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `proceedToAgreement()`
+
+- **ApplyCashAdvanceAgreementViewController** - a view where the user can download and view the cash advance agreement.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapDownloadButton(_ sender: Any)`
+  - `didTapStartSigningButton(_ sender: Any)`
+  - `savePDF(from url: URL)`
+
+- **ApplyCashAdvanceSignatureViewController** - a view where the user can input their signature for the cash advance application.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapRedoButton(_ sender: Any)`
+  - `didTapStartSigningView(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+
+- **ApplyCashAdvanceSubmitViewController** - a view where the user can download and view the signed cash advance agreement as well as containing functions that submit the cash advance application.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapDownloadButton(_ sender: Any)`
+  - `savePDF(from url: URL)`
+  - `didTapSubmitButton(_ sender: Any)`
+
+- **ApplyPaydayLoanViewController** - a view where the user can apply for a payday loan.
+  ##### Methods
+  - `didTapPencilButton(_ sender: Any)`
+  - `didChangeSliderValue(_ sender: UISlider)`
+  - `didTapSubmitButton(_ sender: Any)`
+  - `setTextFieldsTappable(in view: UIView)`
+  - `didTapTextField(_ tap: UITapGestureRecognizer)`
+  - `updateCurrentAmount(_ amount: Float, sender: UIView)`
+  - `refreshTimer(_ sender: UIView? = nil)`
+  - `refreshCalculation(_ sender: UIView? = nil)`
+  - `resetCalculatorView()`
+
+- **ApplyPaydayLoanReviewViewController** - a view where the user can review their information for the payday loan application.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `proceedToAgreement()`
+
+- **ApplyPaydayLoanAgreementViewController** - a view where the user can download and view payday loan agreements.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapDownloadPromissoryNoteButton(_ sender: Any)`
+  - `didTapDownloadAmortizationScheduleButton(_ sender: Any)`
+  - `didTapStartSigningButton(_ sender: Any)`
+  - `savePDF(from url: URL)`
+
+- **ApplyPaydayLoanSignatureViewController** - a view where the user can input their signature for payday loan application.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapRedoButton(_ sender: Any)`
+  - `didTapStartSigningView(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+
+- **ApplyPaydayLoanSubmitViewController** - a view where the user can download and view the signed payday loan agreements, contains functions that allow the user to submit the payday loan application.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapDownloadPromissoryNoteButton(_ sender: Any)`
+  - `didTapDownloadAmortizationScheduleButton(_ sender: Any)`
+  - `didTapSubmitButton(_ sender: Any)`
+  - `savePDF(from url: URL)`
+
+- **PayrollViewController** - a view that contains multiple payroll functionalities.
+  ##### Methods
+  - `didRefreshDashboard(_ sender: Any)`
+  - `updatePayrollScreen()`
+  - `updatePayslip(only: Bool = false)`
+  - `updateTimesheet(only: Bool = false)`
+  - `updatePendingOvertime(only: Bool = false)`
+  - `updateCashAdvances(only: Bool = false)`
+  - `updatePaydayLoans(only: Bool = false)`
+  - `updateLeaves()`
+  - `clockIn()`
+  - `clockOut()`
+  - `cancelOvertime(tranNo: Int)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, heightForRowAt) -> CGFloat`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+  - `tableView(_, estimatedHeightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+
+- **PayslipsViewController** - a view that displays the user's payslips.
+  ##### Methods
+  - `updatePayslips()`
+  - `getFilteredPayslips()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`
+  
+- **PayslipDetailsViewController** - a view that displays the payslip details.
+  ##### Methods
+  - `openAndReloadSection(index: Int, section:String)`
+  - `closeAndReloadSection(index: Int, section:String)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+
+- **TimesheetViewController** - a view that contains the user's past timesheets.
+  ##### Methods
+  - `updateTimesheet()`
+  - `getFilteredTimesheet()`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+
+- **ApplyOvertimeViewController** - a view where the user can apply for an overtime, contains functions that submit the application.
+  ##### Methods
+  - `didTapCloseButton(_ sender: Any)`
+  - `didTapSubmitButton(_ sender: Any)`
+  - `setTextFieldsTappable(in view: UIView)`
+  - `didTapTextField(_ tap: UITapGestureRecognizer)`
+  
+- **LeavesViewController** - a view that displays the user's leave applications.
+  ##### Methods
+  - `refreshLeaveCredits(only: Bool = false)`
+  - `refreshLeaves()`
+  - `getApprovedLeaves()`
+  - `getPendingLeaves()`
+  - `getDeclinedLeaves()`
+  - `getFilteredLeaves()`
+  - `cancelLeave(tranNo: Int)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  
+- **OvertimeRequestsViewController** - a view that displays the user's overtime requests.
+  ##### Methods
+  - `refreshRequests()`
+  - `getPendingOvertimeRequests()`
+  - `getApprovedOvertimeRequests()`
+  - `getDeclinedOvertimeRequests()`
+  - `getFilteredRequests()`
+  - `cancelOvertime()`  
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`
+
+- **ApplyLeaveViewController** - a view where the user can apply for a leave.
+  ##### Methods
+  - `didTapCloseButton(_ sender: Any)`  
+  - `didTapSubmitButton(_ sender: Any)`  
+  - `exitLeaveApplication()`  
+  - `setTextFieldsTappable(in view: UIView)`
+  - `didTapTextField(_ tap: UITapGestureRecognizer)`
+
+- **CashAdvanceListViewController** - a view that lists down the user's cash advance applications.
+  ##### Methods
+  - `updateCashAdvanceItems()`
+  - `getFilteredCashAdvances()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
+
+- **PaydayLoansListViewController** - a view that list's down the user's payday loan applications.
+  ##### Methods
+  - `updateCashAdvanceItems()`
+  - `getFilteredLoans()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
+
 - **ProfileViewController** - contains functions where the user can update their information.
   ##### Methods 
   - `didTapManageProfileButton(_ sender: Any)`
@@ -393,6 +654,277 @@ SignInViewController - contains functions that handles user’s authentication. 
   - `func turnOnDigitalSignOn()`
   - `turnOffDigitalSignOn()`
 
+- **NotificationSettingsViewController** - contains functions where the user can choose to enable push notifications.  
+  ##### Methods
+  - `didTapBackBarButtonItem(_ sender: Any)`
+  - `didChangeSwitchState(_ sender: UISwitch)`
+  - `setSwitchControls()`
+  - `togglePushNotification(willOn: Bool)`
+  - `togglePaymentReminder(willOn: Bool)`
+  - `toggleInvestments(willOn: Bool)`
+  - `toggleApplicationStatus(willOn: Bool)`
+  - `updateSettings()`
+  - `getSettings()`
+
+- **InvestmentViewController** - a view that displays the user's current investments.
+  ##### Methods
+  - `didTapApplyForInvestment(_ sender: Any)`
+  - `refreshInvestments()`
+  - `numberOfSections()`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, didSelectRowAt) -> CGFloat`
+  
+- **InactiveInvestmentViewController** - a view that is displayed if the user has no activated wallet or investments.
+  ##### Methods
+  - `didTapApplyForInvestment(_ sender: Any)`
+  - `showNotice()`
+
+- **ApplyInvestmentViewController** - a view where the user can apply for an investment.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `setTextFieldsTappable(in view: UIView)`
+  - `didTapTextField(_ tap: UITapGestureRecognizer)`
+  - `calculateInvestment()`
+
+- **ApplyInvestmentSummaryViewController** - a view that show's a summary of the information inputted by the user.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+
+- **ApplyInvestmentStep2ViewController** - a view where the user can upload documents for the investment application.
+  ##### Methods
+  - `didTapAddDocumentButton(_ sender: Any)`
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `refreshFields()`
+  - `addDocumentFormView(hidesRemoveButton: Bool = false) -> DocumentFormView?`
+  - `documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL])`
+  - `documentPickerWasCancelled(_ controller: UIDocumentPickerViewController)`
+
+- **ApplyInvestmentStep3StartViewController** - a view that displays the investment agreements, contains functions where the user can download or view the agreements.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapDownloadPromissoryNoteButton(_ sender: Any)`
+  - `didTapDownloadAmortizationScheduleButton(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+  - `savePDF(name: String,from url: URL)`
+
+- **ApplyInvestmentStep3SignatureViewController** - a view where the user can input their signature for an investment application.
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapRedoButton(_ sender: Any)`
+  - `didTapStartSigningView(_ sender: Any)`
+  - `didTapNextButton(_ sender: Any)`
+
+- **ApplyInvestmentStep3SubmitViewController** - a view where the user can download and view the signed invesment agreement,contains functions that submit the investment application.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapDownloadPromissoryNoteButton(_ sender: Any)`
+  - `didTapDownloadAmortizationScheduleButton(_ sender: Any)`
+  - `didTapSubmitButton(_ sender: Any)`
+  - `savePDF(name: String,from url: URL)`
+  
+- **InvestmentDetailsViewController** - a view that displays the user's investment details.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+
+- **HRAdminViewController** - a view that displays both cash advance and payday loans.
+  ##### Methods
+  - `refreshDashboard(_ sender: Any)`
+  - `refreshList(only: Bool = false)`
+  - `refreshCashAdvances(only: Bool = false)`
+  - `refreshPaydayLoans(only: Bool = false)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
+  
+- **HRCashAdvanceReviewViewController** - a view that displays a selected cash advance's information, contains functions that can approve/decline an application.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapDeclineButton(_ sender: Any)`
+  - `didTapApproveButton(_ sender: Any)`
+  - `reloadLabels()`
+  - `updateCashAdvance(with status: CashAdvanceStatus)`
+
+- **HRPaydayLoanReviewViewController** - a view that displays a selected payday loan's information, contains functions that can approve/decline an application.
+  ##### Methods
+  - `didTapBackButton(_ sender: Any)`
+  - `didTapDeclineButton(_ sender: Any)`
+  - `didTapApproveButton(_ sender: Any)`
+  - `reloadLabels()`
+  - `updateCashAdvance(with status: CashAdvanceStatus)`
+
+- **HRPaydayLoansListingViewController** - a view that displays the list of payday loans for multiple users.
+  ##### Methods
+  - `didTapCloseBarButtonItem(_ sender: Any)`
+  - `refreshList(_ sender: Any)`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `setupPaydayLoanCell()`  
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+
+- **HRTimesheetDashboardViewController** - a view that displays the employee timesheets for the current day.
+  ##### Methods
+  - `refreshList(only: Bool = false)`
+  - `refreshTimesheet(only: Bool = false)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
+  
+- **HRTimesheetSearchViewController** - a view that allows the user to search employees past payslips.
+  ##### Methods
+  - `updateTimesheet()` 
+  - `getFilteredTimelogs()` 
+  - `refreshGroups()` 
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  
+- **HREmployeeTimesheetViewController** - a view that displays an employee's past timesheets.
+  ##### Methods
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  
+- **HRTimelogDetailsViewController** - a view that displays information about a selected employee timesheet.
+  ##### Methods
+  - `didTapWholeView(_ sender: Any)`
+  - `didTapCloseButton(_ sender: Any)`
+  - `reloadLabels()`
+  - `didTapBackButton(_ sender: Any)`
+  
+- **HREmployeeTimsheetFilterViewController** - a view that displays all of the selected user's timesheets, contains functions to filter the date.
+  ##### Methods
+  - `didTapWholeView(_ sender: Any)`
+  - `didTapCancelButton(_ sender: Any)`
+  - `didTapSearchButton(_ sender: Any)`
+  
+- **HRLeavesDashboardViewController** - a view that displays the most recent employee leave applications.
+  ##### Methods
+  - `refreshList(only: Bool = false)`
+  - `refreshLeaves(only: Bool = false)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
+  
+- **HRLeavesFilterViewController** - a view where the user can search for employees with leaves.
+  ##### Methods
+  - `updateLeaves()`
+  - `getFilteredLeaves()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
+
+- **HRLeaveReviewViewController** - a view that displays a user's leave application, contains functions that can approve/decline an applications.
+  ##### Methods
+  - `didTapWholeView(_ sender: Any)`
+  - `didTapDeclineButton(_ sender: Any)`
+  - `didTapApproveButton(_ sender: Any)`
+  - `reloadLabels()`
+  - `updateLeaves(approved: Bool)`
+
+- **HROvertimeDashboardViewController** - a view that displays the most recent overtime requests.
+  ##### Methods
+  - `refreshList(only: Bool = false)`
+  - `refreshOvertimes()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
+
+- **HROvertimeListViewController** - a view where the user can search for the past overtime requests of a user.
+  ##### Methods
+  - `updateOvertimes()`
+  - `getFilteredOvertimes()`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat`  
+
+- **HROvertimeReviewViewController** - a view where the user can view details of an overtime request, contains functions that can approve/decline a request.
+  ##### Methods
+  - `didTapWholeView(_ sender: Any)`
+  - `didTapDeclineButton(_ sender: Any)`
+  - `didTapApproveButton(_ sender: Any)`
+  - `reloadLabels()`
+  - `updateOvertime(approved: Bool)`
+
+- **HRPayslipDashboardViewController** - a view where the employee payslips are displayed.
+  ##### Methods
+  - `refreshList(only: Bool = false)`
+  - `refreshPayslips(only: Bool = false)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, estimatedHeightForRowAt) -> CGFloat`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  - `tableView(_, heightForFooterInSection) -> CGFloat` 
+
+- **HRPayslipListViewController** - a view where the user can search for employees with past payslips.
+  ##### Methods
+  - `refreshPayslips()` 
+  - `getFilteredPayslips()` 
+  - `refreshData()` 
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  
+- **HRPayslipDetailsViewController** - a view that displays a selected payslip's details.
+  ##### Methods
+  - `openAndReloadSection(index: Int, section:String)`
+  - `closeAndReloadSection(index: Int, section:String)`
+  - `numberOfSections(in tableView: UITableView) -> Int`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+
+- **HRPastPayslipsListViewController** - a view that lists downs all of the selected user's past payslips.
+  ##### Methods
+  - `refreshPayslips(id: String)`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+
+- **HRAdminEmployeesViewController** - a view that displays all the employees with a search box.
+  ##### Methods
+  - `refreshList()`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
+  
+- **HRCashAdvanceListViewController** - a view that displays more cash advances in a list, is used by both active list and application list.
+  ##### Methods
+  - `didTapCloseBarButtonItem(_ sender: Any)`
+  - `refreshList(_ sender: Any)`
+  - `tableView(_, numberOfRowsInSection) -> Int`
+  - `tableView(_, cellForRowAt) -> UITableViewCell`
+  - `tableView(_, viewForHeaderInSection) -> UIView?`
+  - `tableView(_, heightForHeaderInSection) -> CGFloat`
 
   ### DIAGRAM
 
